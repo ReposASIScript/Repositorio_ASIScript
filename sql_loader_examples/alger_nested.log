@@ -1,0 +1,67 @@
+
+SQL*Loader: Release 8.1.6.0.0 - Production on Tue May 8 15:06:48 2001
+
+(c) Copyright 1999 Oracle Corporation.  All rights reserved.
+
+Control File:   alger_nested.ctl
+Data File:      alger_nested.dat
+  Bad File:     alger_nested.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 65536 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table MICHIGAN_FEATURES, loaded from every logical record.
+Insert option in effect for this table: REPLACE
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+FEATURE_NAME                         4:26    23           CHARACTER            
+LAT_DEGREES                            29     *   °       CHARACTER            
+LAT_MINUTES                          NEXT     *   '       CHARACTER            
+LAT_SECONDS                          NEXT     *           CHARACTER            
+    Terminator string : ''''
+BLANK_SPACE_1                        NEXT     1           CHARACTER            
+  (FILLER FIELD)
+LAT_DIRECTION                        NEXT     1   ,       CHARACTER            
+LON_DEGREES                          NEXT     *   °       CHARACTER            
+LON_MINUTES                          NEXT     *   '       CHARACTER            
+LON_SECONDS                          NEXT     *           CHARACTER            
+    Terminator string : ''''
+BLANK_SPACE_2                        NEXT     1           CHARACTER            
+  (FILLER FIELD)
+LON_DIRECTION                        NEXT     1           CHARACTER            
+FEATURE_TYPE                        61:66     6           CHARACTER            
+COUNTY                              68:72     5           CHARACTER            
+
+Record 3: Rejected - Error on table MICHIGAN_FEATURES, column LAT_DIRECTION.
+Field in data file exceeds maximum length
+Record 8: Rejected - Error on table MICHIGAN_FEATURES, column LAT_DIRECTION.
+Field in data file exceeds maximum length
+
+Table MICHIGAN_FEATURES:
+  8 Rows successfully loaded.
+  2 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                  65518 bytes(41 rows)
+Space allocated for memory besides bind array:        0 bytes
+
+Total logical records skipped:          0
+Total logical records read:            10
+Total logical records rejected:         2
+Total logical records discarded:        0
+
+Run began on Tue May 08 15:06:48 2001
+Run ended on Tue May 08 15:06:48 2001
+
+Elapsed time was:     00:00:00.39
+CPU time was:         00:00:00.11    

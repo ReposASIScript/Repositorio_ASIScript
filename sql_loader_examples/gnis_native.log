@@ -1,0 +1,322 @@
+
+SQL*Loader: Release 8.1.6.0.0 - Production on Wed May 9 08:41:56 2001
+
+(c) Copyright 1999 Oracle Corporation.  All rights reserved.
+
+Control File:   gnis_native.ctl
+Data File:      gnis_native.dat
+  File processing option string: "FIX 326"
+  Bad File:     gnis_native.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 65536 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table GNIS, loaded from every logical record.
+Insert option in effect for this table: TRUNCATE
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+GFN_STATE_ABBR                          1     *           VARCHAR              
+GFN_FEATURE_NAME                        5     *           VARCHAR              
+GFN_FEATURE_TYPE                       67     *           VARCHAR              
+GFN_COUNTY_NAME                       109     *           VARCHAR              
+GFN_FIPS_STATE_CODE                   151     4           INTEGER              
+GFN_FIPS_COUNTY_CODE                  155     2           SMALL INTEGER        
+GFN_PRIMARY_LATITUDE_DMS              157     *           VARCHAR              
+GFN_PRIMARY_LONGITUDE_DMS             179     *           VARCHAR              
+GFN_PRIMARY_LATITUDE_DEC              201     4           FLOAT                
+GFN_PRIMARY_LONGITUDE_DEC             205     8           DOUBLE               
+GFN_SOURCE_LATITUDE_DMS               213     *           VARCHAR              
+  (FILLER FIELD)
+GFN_SOURCE_LONGITUDE_DMS              235     *           VARCHAR              
+  (FILLER FIELD)
+GFN_SOURCE_LATITUDE_DEC               257     8           DOUBLE               
+  (FILLER FIELD)
+GFN_SOURCE_LONGITUDE_DEC              265     8           DOUBLE               
+  (FILLER FIELD)
+GFN_ELEVATION                         273     8           DOUBLE               
+GFN_POPULATION                        281     4           INTEGER              
+GFN_CELL_NAME                         285     *           VARCHAR              
+
+Record 6: Warning on table GNIS, column GFN_FEATURE_NAME
+Variable length field was truncated.
+Record 6: Rejected - Error on table GNIS.
+ORA-01401: inserted value too large for column
+
+Record 7: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 7: Rejected - Error on table GNIS.
+ORA-01401: inserted value too large for column
+
+Record 10: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 10: Rejected - Error on table GNIS.
+ORA-01401: inserted value too large for column
+
+Record 11: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 12: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 11: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 12: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 13: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 14: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 13: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 14: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 15: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 16: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 15: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 16: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 17: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 18: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 17: Rejected - Error on table GNIS.
+ORA-01426: numeric overflow
+
+Record 18: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 19: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 20: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 19: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 20: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 21: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 22: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 21: Rejected - Error on table GNIS.
+ORA-01426: numeric overflow
+
+Record 22: Rejected - Error on table GNIS.
+ORA-01426: numeric overflow
+
+Record 23: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 24: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 23: Rejected - Error on table GNIS.
+ORA-01426: numeric overflow
+
+Record 24: Rejected - Error on table GNIS.
+ORA-01426: numeric overflow
+
+Record 25: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 26: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 25: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 26: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 27: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 28: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 27: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 28: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 29: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 30: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 29: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 30: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 31: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 32: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 31: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 32: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 33: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 34: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 33: Rejected - Error on table GNIS.
+ORA-01426: numeric overflow
+
+Record 34: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 35: Warning on table GNIS, column GFN_SOURCE_LONGITUDE_DMS
+Variable length field was truncated.
+Record 36: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 35: Rejected - Error on table GNIS.
+ORA-01426: numeric overflow
+
+Record 36: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 37: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 38: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 37: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 38: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 39: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 40: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 39: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 40: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 41: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 42: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 41: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 42: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 43: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 44: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 43: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 44: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 45: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 46: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 45: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 46: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 47: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 48: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 47: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 48: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 49: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 50: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 49: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 50: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 51: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 52: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 51: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 52: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 53: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 54: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 53: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 54: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 55: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 56: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 55: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 56: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+Record 57: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 58: Warning on table GNIS, column GFN_CELL_NAME
+Variable length field was truncated.
+Record 57: Rejected - Error on table GNIS, column GFN_STATE_ABBR.
+ORA-01401: inserted value too large for column
+
+
+MAXIMUM ERROR COUNT EXCEEDED - Above statistics reflect partial run.
+
+Table GNIS:
+  7 Rows successfully loaded.
+  51 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                  57460 bytes(2 rows)
+Space allocated for memory besides bind array:        0 bytes
+
+Total logical records skipped:          0
+Total logical records read:            58
+Total logical records rejected:        51
+Total logical records discarded:        0
+
+Run began on Wed May 09 08:41:56 2001
+Run ended on Wed May 09 08:42:02 2001
+
+Elapsed time was:     00:00:05.79
+CPU time was:         00:00:00.19    

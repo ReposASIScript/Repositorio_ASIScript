@@ -1,0 +1,72 @@
+
+SQL*Loader: Release 8.1.6.0.0 - Production on Tue May 8 14:35:36 2001
+
+(c) Copyright 1999 Oracle Corporation.  All rights reserved.
+
+Control File:   ch02_counties.ctl
+
+There are 2 data files:
+Data File:      alger_county_fixed.dat
+  Bad File:     alger_county_fixed.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+Data File:      keweenaw_county_fixed.dat
+  Bad File:     keweenaw_county_fixed.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 65536 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table TEMP_GNIS_COUNTY, loaded from every logical record.
+Insert option in effect for this table: TRUNCATE
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+GC_STATE_ABBR                         1:2     2           CHARACTER            
+GC_COUNTY_NAME                      65:80    16           CHARACTER            
+
+Table GFN_GNIS_FEATURE_NAMES, loaded from every logical record.
+Insert option in effect for this table: TRUNCATE
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+GFN_STATE_ABBR                        1:2     2           CHARACTER            
+GFN_FEATURE_NAME                     4:54    51           CHARACTER            
+GFN_FEATURE_TYPE                    55:64    10           CHARACTER            
+GFN_COUNTY_NAME                     65:80    16           CHARACTER            
+
+
+Table TEMP_GNIS_COUNTY:
+  1037 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Table GFN_GNIS_FEATURE_NAMES:
+  1037 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                   7040 bytes(64 rows)
+Space allocated for memory besides bind array:        0 bytes
+
+Total logical records skipped:          0
+Total logical records read:          1037
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Tue May 08 14:35:36 2001
+Run ended on Tue May 08 14:35:37 2001
+
+Elapsed time was:     00:00:00.81
+CPU time was:         00:00:00.23    

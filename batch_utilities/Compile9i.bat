@@ -1,0 +1,1 @@
+FOR %%C IN (%1) DO ifcmp90.exe userid=%2 module=%%C module_type=FORM COMPILE_ALL=YES window_state=minimize batch=y

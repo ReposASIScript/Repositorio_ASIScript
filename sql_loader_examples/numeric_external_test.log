@@ -1,0 +1,50 @@
+
+SQL*Loader: Release 8.1.6.0.0 - Production on Tue May 8 14:44:38 2001
+
+(c) Copyright 1999 Oracle Corporation.  All rights reserved.
+
+Control File:   numeric_external_test.ctl
+Data File:      numeric_external_test.dat
+  Bad File:     numeric_external_test.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 65536 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table NUMERIC_EXTERNAL_TEST, loaded from every logical record.
+Insert option in effect for this table: INSERT
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+A                                    1:10    10           CHARACTER            
+B                                   12:21    10           CHARACTER            
+C                                   23:32    10           CHARACTER            
+D                                   34:43    10           CHARACTER            
+
+
+Table NUMERIC_EXTERNAL_TEST:
+  6 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                   3072 bytes(64 rows)
+Space allocated for memory besides bind array:        0 bytes
+
+Total logical records skipped:          0
+Total logical records read:             6
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Tue May 08 14:44:38 2001
+Run ended on Tue May 08 14:44:38 2001
+
+Elapsed time was:     00:00:00.20
+CPU time was:         00:00:00.11    

@@ -1,0 +1,59 @@
+
+SQL*Loader: Release 8.1.6.0.0 - Production on Tue May 8 21:26:13 2001
+
+(c) Copyright 1999 Oracle Corporation.  All rights reserved.
+
+Control File:   waterfalls_directions.ctl
+Data File:      waterfalls_photos.dat
+  File processing option string: "str X'2A2A2A0D0A'"
+  Bad File:     waterfalls_photos.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 65536 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table WATERFALLS, loaded from every logical record.
+Insert option in effect for this table: REPLACE
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+STATE                                                     CONSTANT
+    Value is 'MI'
+COUNTY                              FIRST     *   ,       CHARACTER            
+FALLS_NAME                           NEXT     *   ,    "  CHARACTER            
+FALLS_PHOTO_FILE                     NEXT     *   ,    "  CHARACTER            
+  (FILLER FIELD)
+FALLS_PHOTO                       DERIVED     *  WHT      RAW                  
+    Dynamic LOBFILE.  Filename in field FALLS_PHOTO_FILE
+FALLS_DIRECTIONS                  DERIVED     *        "  CHARACTER            
+    Terminator string : 'X2A2A2A0D0A'
+    Static LOBFILE.  Filename is waterfalls_directions.dat
+FALLS_DESCRIPTION                    NEXT  1000   ,    "  CHARACTER            
+
+
+Table WATERFALLS:
+  3 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                  64044 bytes(36 rows)
+Space allocated for memory besides bind array:        0 bytes
+
+Total logical records skipped:          0
+Total logical records read:             3
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Tue May 08 21:26:13 2001
+Run ended on Tue May 08 21:26:14 2001
+
+Elapsed time was:     00:00:01.03
+CPU time was:         00:00:00.17    

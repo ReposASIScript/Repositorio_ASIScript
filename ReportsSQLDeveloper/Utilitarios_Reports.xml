@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<displays>
+<folder>
+	<name><![CDATA[UTILITARIOS]]></name>
+	<tooltip><![CDATA[UTILITARIOS]]></tooltip>
+	<description><![CDATA[ ]]></description>
+		<display id="6e15f95e-014d-1000-8016-90016e873f9a" type="" style="Script" enable="true">
+		<name><![CDATA[Borrar Log Temporal de Mensajes (MENERROR)]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[DELETE FROM MENSAJE_ERROR;
+COMMIT;]]></sql>
+		</query>
+	</display>
+	<display id="6001260a-0141-1000-8001-90016e870b97" type="" style="Table" enable="true">
+		<name><![CDATA[Log Temporal de Mensajes (MENERROR)]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT fecha fecha_insercion, men.mensaje mensaje_guardado
+    FROM mensaje_error men
+   WHERE :P_FECHA IS NULL OR men.fecha = :P_FECHA
+ORDER BY men.secuencia DESC]]></sql>
+			<binds>
+				<bind id="P_FECHA">
+					<prompt><![CDATA[P_FECHA]]></prompt>
+					<tooltip><![CDATA[P_FECHA]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="" author="" subject="" keywords="" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				null																																																																																																																																																																																																																																																																																																																																																																																</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="e1e4971a-0156-1000-8001-90016e873d38" type="" style="Table" enable="true">
+		<name><![CDATA[Estructuras relacionados a PK]]></name>
+		<description><![CDATA[Reporte que indica que estructuras están relacionadas a X llave primaria.]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT cons.owner              "Dueño del Esquema",
+         cons.r_constraint_name  "Nombre de Llave Primaria",
+         cons.constraint_name    "Nombre de Llave Foranea",
+         cons.table_name         "Nombre de Tabla Hija",
+         cols.position           "N° Campo en Llave Foranea",
+         cols.column_name        "Nombre de Columna Hija"
+    FROM all_constraints  cons,
+         all_cons_columns cols
+   WHERE cons.owner             = cols.owner
+     AND cons.constraint_name   = cols.constraint_name
+     AND cons.owner             = NVL(UPPER(:P_USUARIO_DUENIO),USER)
+     AND cons.constraint_type   = 'R'
+     AND cons.r_constraint_name = UPPER(:P_LLAVE_PRIMARIA)
+ORDER BY 1, 2, 3, 4, 5]]></sql>
+			<binds>
+				<bind id="P_USUARIO_DUENIO">
+					<prompt><![CDATA[Dueño del Esquema:]]></prompt>
+					<tooltip><![CDATA[P_USUARIO_DUENIO]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="P_LLAVE_PRIMARIA">
+					<prompt><![CDATA[Nombre de Llave Primaria:]]></prompt>
+					<tooltip><![CDATA[P_LLAVE_PRIMARIA]]></tooltip>
+					<value><![CDATA[MG_PK_TIP_DE_TRA]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																							</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="3380d4b5-0157-1000-8002-90016e879b27" type="" style="plsql-dbms_output" enable="true">
+		<name><![CDATA[Listado de Códigos Según Banco Disponibles para su Uso]]></name>
+		<description><![CDATA[Listado de Códigos Según Banco Disponibles para su Uso]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[DECLARE
+  Lv_ExisteCSB  VARCHAR2(1);
+  Lv_CodError   VARCHAR2(200);
+BEGIN
+  dbms_output.enable(NULL);
+  dbms_output.put_line('<p><table border: 1px>');
+  dbms_output.put_line('<tr><b>CODIGO_SEGUN_BANCO</b></tr>');
+
+  FOR cont IN 1 .. 9999 LOOP
+    BEGIN
+      SELECT 'S' AS Existe
+        INTO Lv_ExisteCSB
+        FROM Mg_Tipos_De_Transacciones trx
+       WHERE Trx.Codigo_Segun_Banco = cont
+    ORDER BY Trx.Codigo_Segun_Banco ASC;
+    EXCEPTION
+      WHEN NO_DATA_FOUND THEN
+        dbms_output.put_line('<tr>'||cont||'</tr>');
+      WHEN OTHERS THEN
+        Lv_CodError := 'Error Generico del Query a Mg_Tipos_De_Transacciones: '||SQLERRM;
+        EXIT;
+    END;
+  END LOOP; -- FOR cont IN 1 .. 9999 LOOP
+
+  dbms_output.put_line('</table></p>');
+
+  IF Lv_CodError IS NOT NULL THEN
+    dbms_output.put_line('<p><b>'||Lv_CodError||'</b></p>');
+  END IF; -- IF Lv_CodError IS NOT NULL THEN
+EXCEPTION
+  WHEN OTHERS THEN
+    Lv_CodError := 'Error Generico del Script: '||SQLERRM;
+    dbms_output.put_line('<p><b>'||Lv_CodError||'</b></p>');
+END;]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																																																													</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="46a661a5-0159-1000-8002-90016e87bb99" type="" style="Table" enable="true">
+		<name><![CDATA[Relación Tablas Padres - Hijas]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT con.table_name "Tabla Hija",
+         con.constraint_name "Llave Foranea",
+         qry.table_name "Tabla Padre",
+         qry.constraint_name "Llave Primaria"
+    FROM all_constraints con, all_constraints qry
+   WHERE con.owner           = qry.owner
+     AND qry.constraint_name = con.r_constraint_name
+     AND con.owner           = :P_USUARIO
+     AND con.table_name      = :P_TABLA_HIJA
+ORDER BY 1, 2]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																																				</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="f5d2f278-0159-1000-8001-90016e87d5e8" type="" style="plsql-dbms_output" enable="true">
+		<name><![CDATA[Generador de Secuencias de BD]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[DECLARE
+  Lv_NomSec  VARCHAR2(30);
+  Ln_MaxVal  NUMBER;
+  Lv_SenSQL  VARCHAR2(1000);
+BEGIN
+  Lv_SenSQL := 'BEGIN FOR I IN 1 .. (:Pn_MaxVal + 1) LOOP SELECT :Pv_NomSec'||'.NEXTVAL INTO Ln_Sec FROM dual; END LOOP; END';
+  dbms_output.put_line(Lv_SenSQL);
+  EXECUTE IMMEDIATE Lv_SenSQL USING IN :Ln_MaxVal, :Lv_NomSec;
+END;
+/]]></sql>
+			<binds>
+				<bind id="Ln_MaxVal">
+					<prompt><![CDATA[Cantidad a Mover:]]></prompt>
+					<tooltip><![CDATA[Ln_MaxVal]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="Lv_NomSec">
+					<prompt><![CDATA[Nombre de la Secuencia:]]></prompt>
+					<tooltip><![CDATA[Lv_NomSec]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																										</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+</folder>
+</displays>

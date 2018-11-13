@@ -1,0 +1,294 @@
+{-- ***************************************************************************
+ -- ** Descr. : A simple tutorial script looping through boilerplate text items
+ -- **          and change the fontsize.
+ -- **
+ -- ** MINVERS: runs on all versions
+ -- ***************************************************************************
+ -- ** 04/01/02 1.001.00 Initial Creation, muellers@orcl-toolbox.com
+ -- ***************************************************************************}
+
+
+{*Global Variable Declaration*}
+DECLARE
+  v_filename       : varchar2;
+  i,j              : number;
+  fntsize          : number;
+  frm              : number;
+  files            : TStringList;
+  items            : TStringList;
+  item             : number;
+  ps               : TParamScreen;
+  pb               : TParamBoard;
+
+{*Main Program Block*}
+BEGIN
+      files := GetFileList('D:\proyectos_Upgrade_Abanks\Altagracia\prueba','*.fmb', true);
+      --files := GetFileList('C:\Abanks_IUBabnk\fmx\LOOK&FEEL\TEMPLATE','*.fmb', true);
+      --files.text := 'C:\Abanks_IUBabnk\fmx\BMG\BMG2021.fmb';
+
+      //loop through all the files
+      for j := 0 to files.count-1 do
+      begin
+        v_filename := files.strings[j];
+        logadd('Checking ('+to_char(j+1)+'/'+to_char(files.count)+' '+v_filename);
+
+        try
+          // load the forms module
+          frm := API_LoadModule(files.strings[j]);
+
+          //get all objects of the forms into a list
+          items := api_getallobjects(frm);
+
+          //loop through the list of items
+          for i := 0 to items.count-1 do
+          begin
+            item := items.objects[i];
+
+            if generic_querytype(item) = D2FFO_CANVAS then
+            begin
+               //logadd('Campo: '+Generic_GetTextProp(item, D2FP_NAME)+' D2FP_ITM_TYP '+to_char(D2FP_ITM_TYP)+' D2FC_ITTY_PB '+to_char(D2FC_ITTY_PB));
+                generic_SetValue(item,D2FP_BACK_COLOR,'white');
+            end;
+
+            if generic_querytype(item) = D2FFO_ITEM then
+            begin
+               //logadd('Campo: '+Generic_GetTextProp(item, D2FP_NAME)+' D2FP_ITM_TYP '+to_char(D2FP_ITM_TYP)+' D2FC_ITTY_PB '+to_char(D2FC_ITTY_PB));
+               if Generic_GetNumProp(item, D2FP_ITM_TYP) = D2FC_ITTY_PB then
+               begin
+                  if not(Generic_IsSubclassed(item)) then
+                  begin
+                     generic_SetValue(item,D2FP_VAT_NAM,'VA_BOTONES');
+                  end;
+               end;
+            end;
+            //is item a graphic item or not ?
+            if generic_querytype(item) = D2FFO_GRAPHIC then
+            begin
+               // Marcos
+               if Generic_GetNumProp(item,D2FP_GRAPHICS_TYP) = D2FC_GRTY_FRAME then
+               begin
+                  generic_SetValue(item,D2FP_BACK_COLOR,'white');
+               end;
+              // textos
+              if Generic_GetNumProp(item,D2FP_GRAPHICS_TYP) = D2FC_GRTY_TEXT then
+              begin
+                 --generic_SetValue(item,D2FP_FILL_PAT,'transparent');
+                 --generic_SetValue(item,D2FP_EDGE_PAT,'transparent');
+                 generic_SetValue(item,D2FP_BEVEL,D2FC_BEST_NONE);
+                 /*if Generic_GetTextProp(item, D2FP_BACK_COLOR) = 'gray' then
+                 begin
+                    generic_SetValue(item,D2FP_BACK_COLOR,'white');
+                    generic_SetValue(item,D2FP_EDGE_BACK_COLOR,'white');
+                    generic_SetValue(item,D2FP_FORE_COLOR,'white');
+                    generic_SetValue(item,D2FP_EDGE_FORE_COLOR,'white');
+                 end;*/
+                 if Generic_GetTextProp(item, D2FP_BACK_COLOR) = 'darkcyan' then
+                 begin
+                    generic_SetValue(item,D2FP_BACK_COLOR,'r0g50b75');  -- r0g25b50
+                    generic_SetValue(item,D2FP_EDGE_BACK_COLOR,'r0g50b75'); -- r0g25b50
+                    generic_SetValue(item,D2FP_EDGE_FORE_COLOR,'r0g50b75'); -- r0g25b50
+                 end;
+                 --
+                 if Generic_GetTextProp(item, D2FP_BACK_COLOR) = 'r0g50b50' then
+                 begin
+                    generic_SetValue(item,D2FP_BACK_COLOR,'r0g50b75');  -- r0g25b50
+                    generic_SetValue(item,D2FP_EDGE_BACK_COLOR,'r0g50b75'); -- r0g25b50
+                    generic_SetValue(item,D2FP_EDGE_FORE_COLOR,'r0g50b75'); -- r0g25b50
+                 end;
+                 --
+                 if Generic_GetTextProp(item, D2FP_BACK_COLOR) = 'r25g50b50' then
+                 begin
+                    generic_SetValue(item,D2FP_BACK_COLOR,'r0g50b75');  -- r0g25b50
+                    generic_SetValue(item,D2FP_EDGE_BACK_COLOR,'r0g50b75'); -- r0g25b50
+                    generic_SetValue(item,D2FP_EDGE_FORE_COLOR,'r0g50b75'); -- r0g25b50
+                 end;
+                 --
+                 if Generic_GetTextProp(item, D2FP_GRA_FONT_COLOR) = 'white' then   -- titulos de columna de multiregistro
+                 begin
+                    //if not(Generic_IsSubclassed(item)) then
+                    //begin
+                       generic_SetValue(item,D2FP_BACK_COLOR,'r0g50b75');
+                       generic_SetValue(item,D2FP_VAT_NAM,'VA_TEXTO_MULTIREG');
+                    //end;
+                 end;
+                 --
+                 if Generic_GetTextProp(item, D2FP_BACK_COLOR) != 'r0g50b75' then -- r0g25b50
+                 begin
+                    if Generic_GetTextProp(item, D2FP_BACK_COLOR) != 'darkcyan' then
+                    begin
+                       if Generic_GetTextProp(item, D2FP_BACK_COLOR) != 'r0g50b50' then
+                       begin
+                           if Generic_GetTextProp(item, D2FP_BACK_COLOR) != 'r25g50b50' then
+                           begin
+                              if Generic_GetTextProp(item, D2FP_GRA_FONT_COLOR) != 'white' then
+                              begin
+                                 if Generic_GetNumProp(item, D2FP_GRA_FONT_WGHT) < D2FC_FOWG_DEMIBOLD then
+                                 begin
+                                    //if not(Generic_IsSubclassed(item)) then
+                                    //begin
+                                       generic_SetTextProp(item, D2FP_EDGE_PAT, 'none');
+                                       generic_SetValue(item,D2FP_VAT_NAM,'VA_TEXTO');
+                                    //end;
+                                 end;
+                                 if Generic_GetNumProp(item, D2FP_GRA_FONT_WGHT) >= D2FC_FOWG_DEMIBOLD then
+                                 begin
+                                    if not(Generic_IsSubclassed(item)) then
+                                    begin
+                                       generic_SetTextProp(item, D2FP_EDGE_FORE_COLOR, 'gray');
+                                       generic_SetTextProp(item, D2FP_EDGE_PAT, 'solid');
+                                       generic_SetValue(item,D2FP_VAT_NAM,'VA_TITULOS');
+                                    end;
+                                 end;
+                              end;
+                           end;
+                       end;
+                    end;
+                 end;
+              end;
+              // Rectangulos
+              //if Generic_GetNumProp(item,D2FP_GRAPHICS_TYP) = D2FC_GRTY_RECT then
+              //begin
+                 if Generic_GetNumProp(item,D2FP_GRAPHICS_TYP) = D2FC_GRTY_RECT then
+                 begin
+                    if Generic_GetTextProp(item, D2FP_BACK_COLOR) = 'gray' then
+                    begin
+                       generic_SetValue(item,D2FP_BACK_COLOR,'white');
+                    end;
+                    if Generic_GetTextProp(item, D2FP_BACK_COLOR) = 'gray24' then
+                    begin
+                       generic_SetValue(item,D2FP_BACK_COLOR,'white');
+                    end;
+                    if Generic_GetTextProp(item, D2FP_BACK_COLOR) = 'darkcyan' then
+                    begin
+                      if Generic_GetTextProp(item, D2FP_FILL_PAT) = 'none' then
+                      begin
+                         generic_SetValue(item,D2FP_BACK_COLOR,'white');
+                      end;
+                    end;
+                    if Generic_GetTextProp(item, D2FP_BACK_COLOR) = 'darkcyan' then
+                    begin
+                       //if not(Generic_IsSubclassed(item)) then
+                       //begin
+                          generic_SetValue(item,D2FP_FORE_COLOR,'black'); -- r0g25b50
+                          generic_SetValue(item,D2FP_BACK_COLOR,'r0g50b75'); -- r0g25b50
+                          generic_SetValue(item,D2FP_VAT_NAM,'VA_CUADRO_MULTIREG');
+                       //end;
+                    end;
+                    if Generic_GetTextProp(item, D2FP_BACK_COLOR) = 'r0g50b50' then
+                    begin
+                       //if not(Generic_IsSubclassed(item)) then
+                       //begin
+                          generic_SetValue(item,D2FP_FORE_COLOR,'black'); -- r0g25b50
+                          generic_SetValue(item,D2FP_BACK_COLOR,'r0g50b75'); -- r0g25b50
+                          generic_SetValue(item,D2FP_VAT_NAM,'VA_CUADRO_MULTIREG');
+                       //end;
+                    end;
+                    if Generic_GetTextProp(item, D2FP_BACK_COLOR) = 'r25g50b50' then
+                    begin
+                       //if not(Generic_IsSubclassed(item)) then
+                       //begin
+                          generic_SetValue(item,D2FP_FORE_COLOR,'black'); -- r0g25b50
+                          generic_SetValue(item,D2FP_BACK_COLOR,'r0g50b75'); -- r0g25b50
+                          generic_SetValue(item,D2FP_VAT_NAM,'VA_CUADRO_MULTIREG');
+                       //end;
+                    end;
+                 end;
+              //end;
+            end;
+            -- Otros objetos
+            if generic_querytype(item) != D2FFO_GRAPHIC then
+            begin
+               if generic_querytype(item) != D2FFO_VIS_ATTR then
+               begin
+                  generic_SetValue(item,D2FP_BACK_COLOR,'white');
+                  if Generic_GetNumProp(item, D2FP_ITM_TYP) = D2FC_ITTY_DI then
+                  begin
+                     //generic_SetValue(item,D2FP_BEVEL,D2FC_BEST_NONE);
+                     /*if Generic_IsSubclassed(item) then
+                     begin
+                        if Generic_GetNumProp(item, D2FP_FONT_WGHT) >= D2FC_FOWG_DEMIBOLD then
+                        begin
+                           generic_SetValue(item,D2FP_VAT_NAM,'VA_TITULOS');
+                        end;
+                     end;*/
+                     if not(Generic_IsSubclassed(item)) then
+                     begin
+                        if Generic_GetNumProp(item, D2FP_FONT_WGHT) < D2FC_FOWG_DEMIBOLD then
+                        begin
+                           generic_SetValue(item,D2FP_BACK_COLOR,'white');
+                           generic_SetValue(item,D2FP_BEVEL,D2FC_BEST_NONE);
+                           generic_SetTextProp(item, D2FP_VAT_NAM, 'VA_TEXTO');
+                        end;
+                        if Generic_GetNumProp(item, D2FP_FONT_WGHT) >= D2FC_FOWG_DEMIBOLD then
+                        begin
+                           //logadd('Campo: '+Generic_GetTextProp(item, D2FP_NAME)+' D2FP_REC_VAT_GRP_NAM '+to_char(D2FP_REC_VAT_GRP_NAM));
+                           //generic_SetValue(item,D2FP_BACK_COLOR,'gray4');
+                           generic_SetValue(item,D2FP_BEVEL,D2FC_BEST_LOWERED);
+                           generic_SetValue(item,D2FP_VAT_NAM,'VA_RESULTADO');
+                           generic_SetTextProp(item, D2FP_REC_VAT_GRP_NAM, 'VA_RESULTADO');
+                        end;
+                     end;
+                  end;
+                  if Generic_GetNumProp(item, D2FP_ITM_TYP) = D2FC_ITTY_TI then
+                  begin
+                     if not(Generic_IsSubclassed(item)) then
+                     begin
+                        if Generic_GetNumProp(item, D2FP_FONT_WGHT) < D2FC_FOWG_DEMIBOLD then
+                        begin
+                           if (Generic_GetTextProp(item, D2FP_VAT_NAM) != 'VA_CAMPOS')
+                           AND ((Generic_GetNumProp(item, D2FP_BEVEL) != D2FC_BEST_LOWERED)
+                           AND  (Generic_GetNumProp(item, D2FP_BEVEL) != D2FC_BEST_RAISED)
+                           AND (Generic_GetNumProp(item, D2FP_BEVEL) != D2FC_BEST_NSET)
+                           AND  (Generic_GetNumProp(item, D2FP_BEVEL) != D2FC_BEST_OUTSET)) then
+                           begin
+                              generic_SetValue(item,D2FP_BACK_COLOR,'white');
+                              generic_SetValue(item,D2FP_BEVEL,D2FC_BEST_NONE);
+                              generic_SetTextProp(item, D2FP_VAT_NAM, 'VA_TEXTO');
+                           end;
+                           if Generic_GetTextProp(item, D2FP_VAT_NAM) = 'VA_CAMPOS' then
+                           begin
+                              generic_SetValue(item,D2FP_BACK_COLOR,'white');
+                              generic_SetValue(item,D2FP_BEVEL,D2FC_BEST_LOWERED);
+                              generic_SetTextProp(item, D2FP_REC_VAT_GRP_NAM, 'VA_CAMPOS');
+                           end;
+                        end;
+                        if Generic_GetNumProp(item, D2FP_FONT_WGHT) >= D2FC_FOWG_DEMIBOLD then
+                        begin
+                           //generic_SetValue(item,D2FP_BACK_COLOR,'gray4');
+                           generic_SetValue(item,D2FP_BEVEL,D2FC_BEST_LOWERED);
+                           generic_SetTextProp(item, D2FP_VAT_NAM, 'VA_RESULTADO');
+                           generic_SetTextProp(item, D2FP_REC_VAT_GRP_NAM, 'VA_RESULTADO');
+                        end;
+                     end;
+                  end;
+                  if (Generic_GetNumProp(item, D2FP_ITM_TYP) != D2FC_ITTY_TI) and (Generic_GetNumProp(item, D2FP_ITM_TYP) != D2FC_ITTY_DI) then
+                  begin
+                    generic_SetValue(item,D2FP_BACK_COLOR,'white');
+                  end;
+               end;
+            end;
+          end;
+
+          //free the list of items from memory
+          items.free;
+
+          //and save it to the new location
+          API_SaveModule(frm,v_filename);
+
+          //... and finally release the module from memory
+          API_DestroyModule(frm);
+
+        except
+          // ups! an error happened, so just log it and proceed to the next module
+          logadd(' =>'+GetError,LogError);
+        end;
+      end;
+
+      //free the file list from memory;
+      files.free;
+
+      // free the parameter screen
+      ps.free;
+
+
+END;

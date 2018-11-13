@@ -1,0 +1,71 @@
+
+SQL*Loader: Release 8.1.6.0.0 - Production on Wed May 9 08:55:32 2001
+
+(c) Copyright 1999 Oracle Corporation.  All rights reserved.
+
+Control File:   ch01_gnis.ctl
+Data File:      michigan_delimited.dat
+  Bad File:     michigan_delimited.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 65536 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table GFN_GNIS_FEATURE_NAMES, loaded from every logical record.
+Insert option in effect for this table: APPEND
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+GFN_STATE_ABBR                      FIRST     *   ,    "  CHARACTER            
+GFN_FEATURE_NAME                     NEXT     *   ,    "  CHARACTER            
+GFN_FEATURE_TYPE                     NEXT     *   ,    "  CHARACTER            
+GFN_COUNTY_NAME                      NEXT     *   ,    "  CHARACTER            
+GFN_FIPS_STATE_CODE                  NEXT     *   ,    "  CHARACTER            
+  (FILLER FIELD)
+GFN_FIPS_COUNTY_CODE                 NEXT     *   ,    "  CHARACTER            
+  (FILLER FIELD)
+GFN_PRIMARY_LATITUDE_DMS             NEXT     *   ,    "  CHARACTER            
+GFN_PRIMARY_LONGITUDE_DMS            NEXT     *   ,    "  CHARACTER            
+GFN_PRIMARY_LATITUDE_DEC             NEXT     *   ,    "  CHARACTER            
+  (FILLER FIELD)
+GFN_PRIMARY_LONGITUDE_DEC            NEXT     *   ,    "  CHARACTER            
+  (FILLER FIELD)
+GFN_SOURCE_LATITUDE_DMS              NEXT     *   ,    "  CHARACTER            
+  (FILLER FIELD)
+GFN_SOURCE_LONGITUDE_DMS             NEXT     *   ,    "  CHARACTER            
+  (FILLER FIELD)
+GFN_SOURCE_LATITUDE_DEC              NEXT     *   ,    "  CHARACTER            
+  (FILLER FIELD)
+GFN_SOURCE_LONGITUDE_DEC             NEXT     *   ,    "  CHARACTER            
+  (FILLER FIELD)
+GFN_ELEVATION                        NEXT     *   ,    "  CHARACTER            
+GFN_POPULATION                       NEXT     *   ,    "  CHARACTER            
+GFN_CELL_NAME                        NEXT     *   ,    "  CHARACTER            
+
+
+Table GFN_GNIS_FEATURE_NAMES:
+  1000 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                  65016 bytes(28 rows)
+Space allocated for memory besides bind array:        0 bytes
+
+Total logical records skipped:          0
+Total logical records read:          1000
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Wed May 09 08:55:32 2001
+Run ended on Wed May 09 08:55:33 2001
+
+Elapsed time was:     00:00:00.93
+CPU time was:         00:00:00.24    

@@ -1,0 +1,9 @@
+DECLARE
+  Lv_NomSec  VARCHAR2(30);
+  Ln_MaxVal  NUMBER;
+  Lv_SenSQL  VARCHAR2(1000);
+BEGIN
+  Lv_SenSQL := 'BEGIN FOR I IN 1 .. (:Pn_MaxVal + 1) LOOP SELECT :Pv_NomSec'||'.NEXTVAL INTO Ln_Sec FROM dual; END LOOP; END';
+  EXECUTE IMMEDIATE Lv_SenSQL USING IN :Ln_MaxVal, :Lv_NomSec;
+END;
+/

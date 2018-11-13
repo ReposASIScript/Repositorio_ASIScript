@@ -1,0 +1,1926 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<displays>
+<folder>
+	<name><![CDATA[SIGASI]]></name>
+	<tooltip><![CDATA[SIGASI]]></tooltip>
+	<description><![CDATA[ ]]></description>
+		<display id="789e76bc-014d-1000-8006-90016e875754" type="" style="Chart" enable="true">
+		<name><![CDATA[Cantidad de Deltas por Cliente - SIGASI]]></name>
+		<description><![CDATA[Cantidad de Deltas por Cliente - SIGASI]]></description>
+		<tooltip><![CDATA[Gráfico que muestra la cantidad de deltas por clientes que se encuentran Vigentes (Desarrollo, Prueba y QA)]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<PLOT_HGRID_WIDTH><![CDATA[THINNER]]></PLOT_HGRID_WIDTH>
+			<Y1AXIS_SCALE_INCREMENT><![CDATA[20.0]]></Y1AXIS_SCALE_INCREMENT>
+			<Y2AXIS_SCALE_MAXIMUM><![CDATA[80.0]]></Y2AXIS_SCALE_MAXIMUM>
+			<Y1AXIS_LINE_WIDTH><![CDATA[THINNEST]]></Y1AXIS_LINE_WIDTH>
+			<Y1AXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></Y1AXIS_TITLE_ALIGNMENT>
+			<LEGEND_LOCATION><![CDATA[AUTOMATIC]]></LEGEND_LOCATION>
+			<LEGEND_ALIGNMENT><![CDATA[LEFT]]></LEGEND_ALIGNMENT>
+			<GRADIENT><![CDATA[true]]></GRADIENT>
+			<PLOT_DATALABELS_SLICE_POSITION><![CDATA[OUTSIDE_SLICE_LINE]]></PLOT_DATALABELS_SLICE_POSITION>
+			<XAXIS_LINE_WIDTH><![CDATA[THINNEST]]></XAXIS_LINE_WIDTH>
+			<LEGEND><![CDATA[true]]></LEGEND>
+			<Y1AXIS_SCALE_MAXIMUM><![CDATA[70.0]]></Y1AXIS_SCALE_MAXIMUM>
+			<XAXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></XAXIS_TITLE_ALIGNMENT>
+			<XAXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></XAXIS_TICK_LABEL_ROTATE>
+			<Y1AXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></Y1AXIS_LOGARITHMIC_BASE>
+			<TYPE><![CDATA[BAR_VERT_CLUST]]></TYPE>
+			<GRID_WIDTH><![CDATA[THINNER]]></GRID_WIDTH>
+			<PLOT_DATALABELS_BAR_POSITION><![CDATA[ABOVE]]></PLOT_DATALABELS_BAR_POSITION>
+			<FOOTNOTE_ALIGNMENT><![CDATA[LEFT]]></FOOTNOTE_ALIGNMENT>
+			<XAXIS_TICK_LABEL_SKIP_MODE><![CDATA[AUTOMATIC]]></XAXIS_TICK_LABEL_SKIP_MODE>
+			<Y2AXIS_LOGARITHMIC_BASE><![CDATA[BASE_10]]></Y2AXIS_LOGARITHMIC_BASE>
+			<GRID><![CDATA[true]]></GRID>
+			<STYLE><![CDATA[Default]]></STYLE>
+			<TITLE_ALIGNMENT><![CDATA[LEFT]]></TITLE_ALIGNMENT>
+			<XAXIS_SCALE_INCREMENT><![CDATA[20.0]]></XAXIS_SCALE_INCREMENT>
+			<PLOT_DATALABELS_SLICE_TYPE><![CDATA[PERCENT_VALUE]]></PLOT_DATALABELS_SLICE_TYPE>
+			<Y2AXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></Y2AXIS_TICK_LABEL_ROTATE>
+			<Y2AXIS_SCALE_MINIMUM><![CDATA[10.0]]></Y2AXIS_SCALE_MINIMUM>
+			<THREED><![CDATA[true]]></THREED>
+			<Y2AXIS_LINE_WIDTH><![CDATA[THINNEST]]></Y2AXIS_LINE_WIDTH>
+			<Y1AXIS_TICK_LABEL_ROTATE><![CDATA[HORIZONTAL]]></Y1AXIS_TICK_LABEL_ROTATE>
+			<Y2AXIS_SCALE_INCREMENT><![CDATA[20.0]]></Y2AXIS_SCALE_INCREMENT>
+			<PLOT_VGRID_WIDTH><![CDATA[THINNER]]></PLOT_VGRID_WIDTH>
+			<Y2AXIS_TITLE_ALIGNMENT><![CDATA[CENTER]]></Y2AXIS_TITLE_ALIGNMENT>
+			<SUBTITLE_ALIGNMENT><![CDATA[LEFT]]></SUBTITLE_ALIGNMENT>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT Cli.Nombre_Cliente, Cli.Nombre_Cliente, COUNT(*) Cantidad
+    FROM Sg_Clientes Cli, Sg_Deltas Del
+   WHERE Cli.Cliente_Id = Del.Cliente_Id
+     AND Del.Etapas_Etapa IN ('Desarrollo','Pruebas','QA')
+GROUP BY Cli.Nombre_Cliente, Cli.Nombre_Cliente
+ORDER BY 1]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="" author="" subject="" keywords="" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				
+				
+				null																																																																																																																																																																																																																																																																																																							</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="780a9356-014d-1000-8003-90016e875754" type="" style="Table" enable="true">
+		<name><![CDATA[Documentación Enviada - SIGASI]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT Doc.Documento_Id "Id del Documento",
+         (SELECT TipDoc.Descripcion FROM Sg_Tipos_De_Documentos TipDoc WHERE TipDoc.Tipo_Documento_Id = Doc.Tpdoc_Tipo_Documento_Id) AS "Tipo de Documento",
+         Doc.Nombre_Del_Documento "Nombre del Documento",
+         (SELECT Cli.Nombre_Cliente From Sg_Clientes Cli, Sg_Deltas Del WHERE Cli.Cliente_Id = Del.Cliente_Id AND Del.Id = Doc.Delta_Id) AS "Destinado A",
+         (SELECT Per.Nombre_Empleado||' '||Per.Apellido_Empleado FROM Sg_Personal Per WHERE Per.Usuario_Id = Del.Usuario_Id_Creadopor) "Subido Por",
+         Doc.Fecha_Inicio "Fecha de Publicacion",
+         Doc.Documento_Digital "Digitalizado"
+    FROM Sg_Deltas Del, Sg_Documentos Doc
+   WHERE Del.Id = Doc.Delta_Id
+     AND (Doc.Nombre_Del_Documento LIKE :P_Nombre_Documento OR :P_Nombre_Documento IS NULL)
+ORDER BY Doc.Documento_Id DESC]]></sql>
+			<binds>
+				<bind id="P_Nombre_Documento">
+					<prompt><![CDATA[P_Nombre_Documento]]></prompt>
+					<tooltip><![CDATA[P_Nombre_Documento]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="" author="" subject="" keywords="" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																																																																			</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="59436622-014d-1000-8001-90016e87d43d" type="" style="Table" enable="true">
+		<name><![CDATA[Deltas por Usuario - SIGASI]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT Per.Usuario_Id,
+         Per.Nombre_Empleado||' '||Per.Apellido_Empleado Nombre_Completo_Empleado,
+         Per.Codigo_Base_De_Datos Usuario_SCM,
+         (SELECT COUNT(*) FROM Sg_Deltas Qry WHERE Qry.Usuario_Id_Creadopor = Per.Usuario_Id) AS Registros_Creados
+    FROM Sg_Personal Per
+   WHERE EXISTS (SELECT 1 FROM Sg_Deltas Del WHERE Del.Usuario_Id_Creadopor = Per.Usuario_Id)
+ORDER BY 1]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="" author="" subject="" keywords="" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				
+				null																																																																																																																																																																																																																																																																																																			</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+		<display id="" type="" style="Table" enable="true">
+			<name><![CDATA[Deltas Registrados]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+				<TYPE><![CDATA[horizontal]]></TYPE>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[SELECT Del.Id Id_Delta, Del.Solicitud_Changepoint, Del.Fecha_Creacion, Del.Fecha_Modificacion,
+         Del.Etapas_Etapa Etapa_Del_Delta, (SELECT Cli.Nombre_Cliente From Sg_Clientes Cli WHERE Cli.Cliente_Id = Del.Cliente_Id) Nombre_Cliente,
+         Del.Nombre_Apk, Del.Descripcion
+    FROM Sg_Deltas Del
+   WHERE USUARIO_ID_CREADOPOR = :USUARIO_ID
+ORDER BY 1 DESC]]></sql>
+				<binds>
+					<bind id="USUARIO_ID">
+						<prompt><![CDATA[USUARIO_ID]]></prompt>
+						<tooltip><![CDATA[USUARIO_ID]]></tooltip>
+						<value><![CDATA[NULL_VALUE]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+				<pdf version="VERSION_1_7" compression="CONTENT">
+					<docproperty title="" author="" subject="" keywords="" />
+					<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+					<column>
+						<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+						<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+						<blob blob="NONE" zip="false" />
+					</column>
+					<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+					<header enable="false" generatedate="false">
+						<data>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					
+					
+					
+					null																																																																																																																																																																																																																																																																																																																																																														</data>
+					</header>
+					<footer enable="false" generatedate="false">
+						<data value="null" />
+					</footer>
+					<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+				</pdf>
+		</display>
+	</display>
+	<display id="6e680a04-014d-1000-8019-90016e873f9a" type="" style="Table" enable="true">
+		<name><![CDATA[Objetos por Delta - SIGASI]]></name>
+		<description><![CDATA[Objetos por Delta - SIGASI]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT Del.Id ID_Delta, Del.Solicitud_Changepoint "Solicitud del Changepoint",
+        (SELECT Per.Nombre_Empleado||' '||Per.Apellido_Empleado FROM Sg_Personal Per WHERE Per.Usuario_Id = Del.Usuario_Id_Creadopor) "Creado Por",
+        Del.Fecha_Creacion "Fecha de Creacion",
+         Del.Fecha_Modificacion "Fecha de Modificacion",
+         Del.Etapas_Etapa "Etapa del Delta",
+         (SELECT Cli.Nombre_Cliente From Sg_Clientes Cli WHERE Cli.Cliente_Id = Del.Cliente_Id) "Nombre del Cliente",
+         Del.Nombre_Apk "Nombre del APK",
+         Del.Archivo_Apk "Archivo APK",
+         Del.Descripcion "Descripcion de la solicitud"
+    FROM Sg_Deltas Del
+   WHERE Del.Solicitud_Changepoint LIKE UPPER(:P_SOLICITUD) OR :P_SOLICITUD IS NULL
+ORDER BY 1 DESC]]></sql>
+			<binds>
+				<bind id="P_SOLICITUD">
+					<prompt><![CDATA[Solicitud de Changepoint]]></prompt>
+					<tooltip><![CDATA[P_SOLICITUD]]></tooltip>
+					<value><![CDATA[PESUL-2014-00371%]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="" author="" subject="" keywords="" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				null																																																																																																																																																																																																																																																																																											</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+		<display id="" type="" style="Table" enable="true">
+			<name><![CDATA[Objetos]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+				<TYPE><![CDATA[horizontal]]></TYPE>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[SELECT NVL(ArcExt.Orden, ArcExt.Archivo_Externo_Id) "Orden",
+         DECODE(ArcExt.Id_Tipo_Obj, 1,'FORMA NODO',
+                                    2,'FORMA AGEN',
+                                    3,'REPORTE AGEN',
+                                    4,'REPORTE NODO',
+                                    5,'TEMPLATES NODO FMB',
+                                    6,'TEMPLATES AGENCIA',
+                                    7,'LIBRERIA NODO',
+                                    8,'LIBRERIA AGEN',
+                                    9,'PROCEDIMIENTO NODO',
+                                   10,'PROCEDIMIENTO AGEN',
+                                   11,'FUNCION NODO',
+                                   12,'FUNCION AGEN',
+                                   13,'PAQUETE NODO',
+                                   14,'PAQUETE AGEN',
+                                   15,'TRIGGER NODO',
+                                   16,'TEMPLATES NODO RDF',
+                                   17,'TRIGGER AGEN',
+                                   18,'LIBRERIA WEB',
+                                   19,'VID FILE',
+                                   20,'DLL FILE',
+                                   21,'VISTAS AGEN',
+                                   22,'VISTAS NODO',
+                                   23,'DDL AGEN',
+                                   24,'DDL NODO',
+                                   25,'ABANKSGX class',
+                                   26,'ABANKSGX js',
+                                   27,'GXFLOW class',
+                                   28,'GXFLOW js',
+                                   29,'COLLECTOR class',
+                                   30,'COLLECTOR js',
+                                   31,'COLLECTOR jar',
+                                   32,'ABANKSGX jar',
+                                   33,'ABANKSGX Imagen',
+                                   34,'COLLECTOR Imagen',
+                                   35,'ABANKSGX rpt',
+                                   36,'RESOURCES ABK Imagen',
+                                   37,'Lista Imagen GXFLOW',
+                                   38,'Lista Imagen ABANKSGX',
+                                   39,'Lista Imagen COLLECTOR',
+                                   99,'Defina el tipo') "Tipo de Objeto",
+         ArcExt.Nombresolo "Nombre del Objeto",
+         ArcExt.Nombre_Y_Path "Ruta en PC Local"
+    FROM Sg_Archivos_Externos ArcExt
+   WHERE ArcExt.Delta_Id = :ID_DELTA
+ORDER BY ArcExt.Orden ASC]]></sql>
+				<binds>
+					<bind id="ID_DELTA">
+						<prompt><![CDATA[ID_DELTA]]></prompt>
+						<tooltip><![CDATA[ID_DELTA]]></tooltip>
+						<value><![CDATA[NULL_VALUE]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+				<pdf version="VERSION_1_7" compression="CONTENT">
+					<docproperty title="" author="" subject="" keywords="" />
+					<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+					<column>
+						<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+						<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+						<blob blob="NONE" zip="false" />
+					</column>
+					<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+					<header enable="false" generatedate="false">
+						<data>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					
+					null																																																																																																																																																																																																																																																																																																																																																				</data>
+					</header>
+					<footer enable="false" generatedate="false">
+						<data value="null" />
+					</footer>
+					<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+				</pdf>
+		</display>
+		<display id="" type="" style="Table" enable="true">
+			<name><![CDATA[Documentos]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+				<TYPE><![CDATA[horizontal]]></TYPE>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[SELECT (SELECT TipDoc.Descripcion FROM Sg_Tipos_De_Documentos TipDoc WHERE TipDoc.Tipo_Documento_Id = Doc.Tpdoc_Tipo_Documento_Id) "Tipo de Documento",
+         Doc.Nombre_Del_Documento "Nombre del Documento",
+         Doc.Fecha_Inicio "Fecha de Carga",
+         Doc.Documento_Digital "Archivo Digitalizado"
+    FROM Sg_Documentos Doc
+   WHERE Doc.Delta_Id = :ID_DELTA
+ORDER BY Doc.Documento_Id]]></sql>
+				<binds>
+					<bind id="ID_DELTA">
+						<prompt><![CDATA[ID_DELTA]]></prompt>
+						<tooltip><![CDATA[ID_DELTA]]></tooltip>
+						<value><![CDATA[NULL_VALUE]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+				<pdf version="VERSION_1_7" compression="CONTENT">
+					<docproperty title="" author="" subject="" keywords="" />
+					<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+					<column>
+						<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+						<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+						<blob blob="NONE" zip="false" />
+					</column>
+					<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+					<header enable="false" generatedate="false">
+						<data>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					null																																																																																																																																																																																																																																																																																																																																															</data>
+					</header>
+					<footer enable="false" generatedate="false">
+						<data value="null" />
+					</footer>
+					<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+				</pdf>
+		</display>
+		<display id="" type="" style="Table" enable="true">
+			<name><![CDATA[Eventos]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+				<TYPE><![CDATA[horizontal]]></TYPE>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[SELECT (SELECT Amb.Etapas_Etapa FROM Sg_Ambientes Amb WHERE Amb.Ambiente_Id = Eve.Ambiente_Id) AS "Ambiente de Compilacion",
+         Eve.Estado "Estado de Compilacion",
+         Eve.Fecha_Creacion "Fecha de Compilacion",
+         Eve.Fecha_Aplicado "Fecha de Aplicacion",
+         Eve.Log_Del_Evento "Log de Compilacion"
+    FROM Sg_Eventos Eve
+   WHERE Eve.Delta_Id = :ID_DELTA
+ORDER BY Eve.Evento_Id DESC]]></sql>
+				<binds>
+					<bind id="ID_DELTA">
+						<prompt><![CDATA[ID_DELTA]]></prompt>
+						<tooltip><![CDATA[ID_DELTA]]></tooltip>
+						<value><![CDATA[NULL_VALUE]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+				<pdf version="VERSION_1_7" compression="CONTENT">
+					<docproperty title="null" author="null" subject="null" keywords="null" />
+					<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+					<column>
+						<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+						<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+						<blob blob="NONE" zip="false" />
+					</column>
+					<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+					<header enable="false" generatedate="false">
+						<data>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						null																																																																																																																																																																																																																																																</data>
+					</header>
+					<footer enable="false" generatedate="false">
+						<data value="null" />
+					</footer>
+					<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+				</pdf>
+		</display>
+	</display>
+	<display id="6da3565e-014d-1000-8001-90016e873f9a" type="" style="Table" enable="true">
+		<name><![CDATA[Objetos por Eventos - SIGASI]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT Eve.Evento_Id,
+         Eve.Delta_Id,
+         (SELECT Amb.Etapas_Etapa FROM Sg_Ambientes Amb WHERE Amb.Ambiente_Id = Eve.Ambiente_Id) Ambiente,
+         (SELECT Per.Codigo_Base_De_Datos FROM Sg_Personal Per WHERE Per.Usuario_Id = Eve.Usuario_Id_Creadopor) Usuario_Generador,
+         Eve.Estado,
+         Eve.Fecha_Creacion,
+         Eve.Fecha_Aplicado,
+         Eve.Log_Del_Evento
+    FROM Sg_Eventos Eve
+   WHERE EXISTS (SELECT 1 FROM Sg_Deltas Del WHERE Del.Id = Eve.Delta_Id AND Del.Etapas_Etapa IN ('Desarrollo','Pruebas','QA'))
+ORDER BY Eve.Evento_Id DESC]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="" author="" subject="" keywords="" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				null																																																																																																																																																																																																																																																																																											</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+		<display id="" type="" style="Table" enable="true">
+			<name><![CDATA[Objetos]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+				<TYPE><![CDATA[horizontal]]></TYPE>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[SELECT NVL(ArcExt.Orden, ArcExt.Id_Tipo_Obj) Orden,
+         ArcExt.Nombresolo Objeto,
+         ArcExt.Nombre_Y_Path Ruta
+    FROM Sg_Archivos_Externos ArcExt
+   WHERE ArcExt.Delta_Id = :DELTA_ID
+ORDER BY NVL(ArcExt.Orden, ArcExt.Id_Tipo_Obj)]]></sql>
+				<binds>
+					<bind id="DELTA_ID">
+						<prompt><![CDATA[DELTA_ID]]></prompt>
+						<tooltip><![CDATA[DELTA_ID]]></tooltip>
+						<value><![CDATA[NULL_VALUE]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+				<pdf version="VERSION_1_7" compression="CONTENT">
+					<docproperty title="" author="" subject="" keywords="" />
+					<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+					<column>
+						<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+						<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+						<blob blob="NONE" zip="false" />
+					</column>
+					<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+					<header enable="false" generatedate="false">
+						<data>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					
+					null																																																																																																																																																																																																																																																																																																																																																				</data>
+					</header>
+					<footer enable="false" generatedate="false">
+						<data value="null" />
+					</footer>
+					<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+				</pdf>
+		</display>
+	</display>
+	<display id="7d014def-014d-1000-8001-90016e87202c" type="" style="Chart" enable="true">
+		<name><![CDATA[Cantidad de Deltas por Status - SIGASI]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<LEGEND><![CDATA[true]]></LEGEND>
+			<THREED><![CDATA[true]]></THREED>
+			<GRID><![CDATA[true]]></GRID>
+			<STYLE><![CDATA[Autumn]]></STYLE>
+			<GRADIENT><![CDATA[true]]></GRADIENT>
+			<TYPE><![CDATA[BAR_VERT_STACK]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT Del.Etapas_Etapa,
+         Del.Etapas_Etapa,
+         COUNT(*) Cantidad
+    FROM Sg_Deltas Del
+   WHERE Del.Etapas_Etapa IN ('Desarrollo','Pruebas','QA')
+GROUP BY Del.Etapas_Etapa, Del.Etapas_Etapa
+ORDER BY 1]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="" author="" subject="" keywords="" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																																																														</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<folder>
+		<name><![CDATA[Utilidades]]></name>
+		<tooltip><![CDATA[Utilidades]]></tooltip>
+		<description><![CDATA[ ]]></description>
+			<display id="75f923b7-014f-1000-8002-90016e8776f6" type="" style="plsql-dbms_output" enable="true">
+			<name><![CDATA[Eliminar Delta - SIGASI]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[Para eliminar un delta completamente, incluyendo documentación, objetos y eventos generados.]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[DECLARE
+  CURSOR C_Delta (Cv_Solicitud  Sg_Deltas.Solicitud_Changepoint%TYPE) IS
+    SELECT Del.Id Delta_Id,
+           Del.Solicitud_Changepoint,
+           (SELECT Per.Nombre_Empleado||' '||Per.Apellido_Empleado FROM Sg_Personal Per WHERE Per.Usuario_Id = Del.Usuario_Id_Creadopor) AS Creado_Por,
+           Del.Fecha_Creacion,
+           (SELECT Cli.Nombre_Cliente From Sg_Clientes Cli WHERE Cli.Cliente_Id = Del.Cliente_Id) AS Nombre_Cliente,
+           Del.Nombre_Apk,
+           NVL(Del.Descripcion,'NINGUNA') Descripcion
+      FROM Sg_Deltas Del
+     WHERE Del.Solicitud_Changepoint = UPPER(C_Delta.Cv_Solicitud);
+
+  Lr_Deltas      C_Delta%ROWTYPE;
+  Lb_Encontro    BOOLEAN;
+  NOT_FOUND      EXCEPTION;
+  OTROS_ERRORES  EXCEPTION;
+BEGIN
+  IF C_Delta%ISOPEN THEN
+    CLOSE C_Delta;
+  END IF; -- IF C_Delta%ISOPEN THEN
+
+  OPEN C_Delta (:P_SOLICITUD);
+  FETCH C_Delta INTO Lr_Deltas;
+  Lb_Encontro := C_Delta%NOTFOUND;
+  CLOSE C_Delta;
+  
+  IF Lb_Encontro THEN
+    dbms_output.put_line('<b>No se Encontro el Delta Especificado</b>');
+    RAISE NOT_FOUND;
+  ELSE
+    dbms_output.put_line('<b>Delta a Eliminar</b>: '  ||Lr_Deltas.Solicitud_Changepoint||'<p />'||
+                         '<b>Creado Por</b>: '        ||Lr_Deltas.Creado_Por           ||'<p />'||
+                         '<b>Fecha de Creacion</b>: ' ||Lr_Deltas.Fecha_Creacion       ||'<p />');
+
+    dbms_output.put_line('<b>Nombre del Cliente</b>: '||Lr_Deltas.Nombre_Cliente       ||'<p />'||
+                         '<b>Nombre del APK</b>: '    ||Lr_Deltas.Nombre_Apk           ||'<p />'||
+                         '<b>Descripcion</b>: '       ||Lr_Deltas.Descripcion          ||'<br />');
+
+    BEGIN
+      dbms_output.put_line('<b>Iniciando Eliminación de SG_DOCUMENTOS</b><p />');
+      DELETE FROM Sg_Documentos WHERE Delta_Id = Lr_Deltas.Delta_Id;
+      dbms_output.put_line('<b>Total de Registros Eliminados</b>: '||SQL%ROWCOUNT||'<p />');
+
+      dbms_output.put_line('<b>Iniciando Eliminación de SG_EVENTOS</b><p />');
+      DELETE FROM Sg_Eventos WHERE Delta_Id = Lr_Deltas.Delta_Id;
+      dbms_output.put_line('<b>Total de Registros Eliminados</b>: '||SQL%ROWCOUNT||'<p />');
+
+      dbms_output.put_line('<b>Iniciando Eliminación de SG_ARCHIVOS_EXTERNOS</b><p />');
+      DELETE FROM Sg_Archivos_Externos WHERE Delta_Id = Lr_Deltas.Delta_Id;
+      dbms_output.put_line('<b>Total de Registros Eliminados</b>: '||SQL%ROWCOUNT||'<p />');
+
+      dbms_output.put_line('<b>Iniciando Eliminación de SG_DELTAS</b><p />');
+      DELETE FROM Sg_Deltas WHERE Id = Lr_Deltas.Delta_Id;
+      dbms_output.put_line('<b>Total de Registros Eliminados</b>: '||SQL%ROWCOUNT||'<p />');
+
+      COMMIT;
+      dbms_output.put_line('<b>REGISTROS ELIMINADOS SATISFACTORIAMENTE</b>');
+    EXCEPTION
+      WHEN OTHERS THEN
+        dbms_output.put_line('<b>PROBLEMAS AL INTENTAR ELIMINAR REGISTROS</b>: '||SQLERRM);
+        RAISE OTROS_ERRORES;
+    END;
+  END IF; -- IF Lb_Encontro THEN
+EXCEPTION
+  WHEN NOT_FOUND THEN
+    ROLLBACK;
+  WHEN OTROS_ERRORES THEN
+    ROLLBACK;
+END;]]></sql>
+				<binds>
+					<bind id="P_SOLICITUD">
+						<prompt><![CDATA[P_SOLICITUD]]></prompt>
+						<tooltip><![CDATA[P_SOLICITUD]]></tooltip>
+						<value><![CDATA[PESUL-2017-00173]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+				<pdf version="VERSION_1_7" compression="CONTENT">
+					<docproperty title="null" author="null" subject="null" keywords="null" />
+					<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+					<column>
+						<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+						<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+						<blob blob="NONE" zip="false" />
+					</column>
+					<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+					<header enable="false" generatedate="false">
+						<data>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						null																																																																																																																																																																																																																																																																								</data>
+					</header>
+					<footer enable="false" generatedate="false">
+						<data value="null" />
+					</footer>
+					<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+				</pdf>
+		</display>
+		<display id="f7e5cb58-014d-1000-8001-90016e87615a" type="" style="Script" enable="true">
+			<name><![CDATA[Modificación de Etapa - SIGASI]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[Para modificar la etapa de una solicitud en el SIGASI.]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[UPDATE Sg_Deltas Del
+   SET Del.Etapas_Etapa = DECODE(UPPER(:Nueva_Etapa),'D','Desarrollo','P','Pruebas','Q','QA','E','Enviado',Del.Etapas_Etapa)
+ WHERE Del.Solicitud_Changepoint = :Solicitud
+/
+COMMIT
+/]]></sql>
+				<binds>
+					<bind id="Nueva_Etapa">
+						<prompt><![CDATA[Nueva_Etapa]]></prompt>
+						<tooltip><![CDATA[Nueva_Etapa]]></tooltip>
+						<value><![CDATA[e]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+					<bind id="Solicitud">
+						<prompt><![CDATA[Solicitud]]></prompt>
+						<tooltip><![CDATA[Solicitud]]></tooltip>
+						<value><![CDATA[NULL_VALUE]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+				<pdf version="VERSION_1_7" compression="CONTENT">
+					<docproperty title="null" author="null" subject="null" keywords="null" />
+					<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+					<column>
+						<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+						<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+						<blob blob="NONE" zip="false" />
+					</column>
+					<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+					<header enable="false" generatedate="false">
+						<data>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					
+					
+					
+					null																																																																																																																																																																																																																																																																																												</data>
+					</header>
+					<footer enable="false" generatedate="false">
+						<data value="null" />
+					</footer>
+					<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+				</pdf>
+		</display>
+		<display id="c8a121cf-0150-1000-8001-90016e87d1e5" type="" style="plsql-dbms_output" enable="true">
+			<name><![CDATA[Documentación para Changepoint - SIGASI]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[Armado de documentación del delta para CP]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[DECLARE
+  CURSOR C_Delta (Cv_Solicitud  Sg_Deltas.Solicitud_Changepoint%TYPE) IS
+    SELECT Del.Id Delta_Id,
+           Del.Descripcion,
+           (SELECT Per.Codigo_Base_De_Datos FROM Sg_Personal Per WHERE Per.Usuario_Id = Del.Usuario_Id_Creadopor) Creado_Por
+      FROM Sg_Deltas Del
+     WHERE Del.Solicitud_Changepoint = UPPER(C_Delta.Cv_Solicitud);
+
+  CURSOR C_Objetos (Cn_DeltaID  Sg_Archivos_Externos.Delta_Id%TYPE) IS
+    SELECT ArcExt.Id_Tipo_Obj,
+           ArcExt.NombreSolo Objeto
+      FROM Sg_Archivos_Externos ArcExt
+     WHERE ArcExt.Delta_Id = C_Objetos.Cn_DeltaID
+  ORDER BY ArcExt.Orden ASC;
+
+  CURSOR C_Documentos (Cn_DeltaID  Sg_Documentos.Delta_Id%TYPE) IS
+    SELECT Doc.Nombre_Del_Documento
+      FROM Sg_Documentos Doc
+     WHERE Doc.Delta_Id = C_Documentos.Cn_DeltaID
+  ORDER BY Doc.Documento_Id ASC;
+
+  Lr_Delta       C_Delta%ROWTYPE;
+  Lv_DDLNodo     VARCHAR2(32000);
+  Lv_DDLAgen     VARCHAR2(32000);
+  Lv_ObjNodo     VARCHAR2(32000);
+  Lv_ObjAgen     VARCHAR2(32000);
+  Lv_FMBNodo     VARCHAR2(32000);
+  Lv_FMBAgen     VARCHAR2(32000);
+  Lv_RDFNodo     VARCHAR2(32000);
+  Lv_RDFAgen     VARCHAR2(32000);
+  Lv_Documentos  VARCHAR2(32000);
+  Lb_Objetos     CLOB;
+BEGIN
+  IF C_Delta%ISOPEN THEN
+    CLOSE C_Delta;
+  END IF;
+  OPEN C_Delta (Cv_Solicitud => :P_SOLICITUD);
+  FETCH C_Delta INTO Lr_Delta;
+  CLOSE C_Delta;
+
+  DBMS_OUTPUT.PUT_LINE('<p>'||SUBSTR(Lr_Delta.Descripcion,1,9)||'</p>'||
+                       '<p>'||SUBSTR(Lr_Delta.Descripcion,11) ||'</p><br />');
+
+  FOR Obj IN C_Objetos (Cn_DeltaID => Lr_Delta.Delta_Id) LOOP
+
+    IF Obj.Id_Tipo_Obj = 24 THEN                   -- DDL NODO
+      Lv_DDLNodo := Lv_DDLNodo || '<p>  ' || Obj.Objeto || '</p>';
+    ELSIF Obj.Id_Tipo_Obj = 23 THEN                -- DDL AGEN
+      Lv_DDLAgen := Lv_DDLAgen || '<p>  ' || Obj.Objeto || '</p>';
+    ELSIF Obj.Id_Tipo_Obj IN (9,11,13,15,22) THEN  -- OBJETOS BD NODO
+      Lv_ObjNodo := Lv_ObjNodo || '<p>  ' || Obj.Objeto || ' IDVERSION0000 </p>'||
+                                  '<p> Aplicado en: ' || NULL                ||'</p>'||
+                                  '<p> Responsable: ' || Lr_Delta.Creado_Por ||'</p>';
+    ELSIF Obj.Id_Tipo_Obj IN (10,12,14,17,21) THEN -- OBJETOS BD AGEN
+      Lv_ObjAgen := Lv_ObjAgen || '<p>  ' || Obj.Objeto || ' IDVERSION0000 </p>'||
+                                  '<p> Aplicado en: ' || NULL                ||'</p>'||
+                                  '<p> Responsable: ' || Lr_Delta.Creado_Por ||'</p>';
+    ELSIF Obj.Id_Tipo_Obj = 1 THEN                 -- FORMA NODO
+      Lv_FMBNodo := Lv_FMBNodo || '<p>  ' || Obj.Objeto || '   IDVERSION0000</p>';
+    ELSIF Obj.Id_Tipo_Obj = 2 THEN                 -- FORMA AGEN
+      Lv_FMBAgen := Lv_FMBAgen || '<p>  ' || Obj.Objeto || '   IDVERSION0000</p>';
+    ELSIF Obj.Id_Tipo_Obj = 3 THEN                 -- REPORTE NODO
+      Lv_RDFNodo := Lv_RDFNodo || '<p>  ' || Obj.Objeto || '   IDVERSION0000</p>';
+    ELSIF Obj.Id_Tipo_Obj = 4 THEN                 -- REPORTE AGEN
+      Lv_RDFAgen := Lv_RDFAgen || '<p>  ' || Obj.Objeto || '   IDVERSION0000</p>';
+    END IF; -- IF Obj.Id_Tipo_Obj = 24 THEN
+
+  END LOOP; -- FOR Obj IN C_Objetos (Cn_DeltaID => Lr_Delta.Delta_Id) LOOP
+
+  FOR Doc IN C_Documentos (Cn_DeltaID => Lr_Delta.Delta_Id) LOOP
+    Lv_Documentos := '<p>' || Doc.Nombre_Del_Documento || '</p>';
+  END LOOP; -- FOR Doc IN C_Documentos (Cn_DeltaID => Lr_Delta.Delta_Id) LOOP
+
+  SELECT DECODE(Lv_DDLNodo, NULL, NULL,'<p>SCRIPTS:<p>'    ||
+                                          '<p>Nodo:<p>'    ||
+                                       Lv_DDLNodo)         ||
+         DECODE(Lv_DDLAgen, NULL, NULL,   '<p>Agencia:</p>'||
+                                       Lv_DDLAgen)         ||
+         DECODE(Lv_ObjNodo, NULL, NULL,'<p>OBJETOS:</p>'   ||
+                                          '<p>Nodo:<p>'    ||
+                                       Lv_ObjNodo)         ||
+         DECODE(Lv_ObjAgen, NULL, NULL,   '<p>Agencia:</p>'||
+                                       Lv_ObjAgen)
+    INTO Lb_Objetos
+    FROM dual;
+
+  --MENERROR(Lb_Objetos);
+END;]]></sql>
+				<binds>
+					<bind id="P_SOLICITUD">
+						<prompt><![CDATA[Solicitud de Changepoint:]]></prompt>
+						<tooltip><![CDATA[P_SOLICITUD]]></tooltip>
+						<value><![CDATA[PESUL-2015-00369]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+				<pdf version="VERSION_1_7" compression="CONTENT">
+					<docproperty title="" author="" subject="" keywords="" />
+					<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+					<column>
+						<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+						<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+						<blob blob="NONE" zip="false" />
+					</column>
+					<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+					<header enable="false" generatedate="false">
+						<data>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						null																																																																																																																																																																																																												</data>
+					</header>
+					<footer enable="false" generatedate="false">
+						<data value="null" />
+					</footer>
+					<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+				</pdf>
+		</display>
+		<display id="35a15118-0154-1000-8001-90016e87c698" type="" style="plsql-dbms_output" enable="true">
+			<name><![CDATA[Eliminar Eventos de Delta - SIGASI]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[DECLARE
+  CURSOR C_Delta (Cv_Solicitud  Sg_Deltas.Solicitud_Changepoint%TYPE) IS
+    SELECT Del.Id Delta_Id,
+           Del.Solicitud_Changepoint,
+           (SELECT Per.Nombre_Empleado||' '||Per.Apellido_Empleado FROM Sg_Personal Per WHERE Per.Usuario_Id = Del.Usuario_Id_Creadopor) AS Creado_Por,
+           Del.Fecha_Creacion,
+           (SELECT Cli.Nombre_Cliente From Sg_Clientes Cli WHERE Cli.Cliente_Id = Del.Cliente_Id) AS Nombre_Cliente,
+           Del.Nombre_Apk,
+           NVL(Del.Descripcion,'NINGUNA') Descripcion
+      FROM Sg_Deltas Del
+     WHERE Del.Solicitud_Changepoint = UPPER(C_Delta.Cv_Solicitud);
+
+  Lr_Deltas      C_Delta%ROWTYPE;
+  Lb_Encontro    BOOLEAN;
+  NOT_FOUND      EXCEPTION;
+  OTROS_ERRORES  EXCEPTION;
+BEGIN
+  IF C_Delta%ISOPEN THEN
+    CLOSE C_Delta;
+  END IF; -- IF C_Delta%ISOPEN THEN
+
+  OPEN C_Delta (:P_SOLICITUD);
+  FETCH C_Delta INTO Lr_Deltas;
+  Lb_Encontro := C_Delta%NOTFOUND;
+  CLOSE C_Delta;
+  
+  IF Lb_Encontro THEN
+    dbms_output.put_line('<b>No se Encontro el Delta Especificado</b>');
+    RAISE NOT_FOUND;
+  ELSE
+    dbms_output.put_line('<b>Delta</b>: '             ||Lr_Deltas.Solicitud_Changepoint||'<p />'||
+                         '<b>Creado Por</b>: '        ||Lr_Deltas.Creado_Por           ||'<p />'||
+                         '<b>Fecha de Creacion</b>: ' ||Lr_Deltas.Fecha_Creacion       ||'<p />');
+
+    dbms_output.put_line('<b>Nombre del Cliente</b>: '||Lr_Deltas.Nombre_Cliente       ||'<p />'||
+                         '<b>Nombre del APK</b>: '    ||Lr_Deltas.Nombre_Apk           ||'<p />'||
+                         '<b>Descripcion</b>: '       ||Lr_Deltas.Descripcion          ||'<br />');
+
+    BEGIN
+      dbms_output.put_line('<b>Iniciando Eliminación de SG_EVENTOS</b><p />');
+      DELETE FROM Sg_Eventos WHERE Delta_Id = Lr_Deltas.Delta_Id;
+      dbms_output.put_line('<b>Total de Registros de Eventos Eliminados</b>: '||SQL%ROWCOUNT||'<p />');
+
+      COMMIT;
+      dbms_output.put_line('<b>REGISTROS ELIMINADOS SATISFACTORIAMENTE</b>');
+    EXCEPTION
+      WHEN OTHERS THEN
+        dbms_output.put_line('<b>PROBLEMAS AL INTENTAR ELIMINAR REGISTROS DE EVENTOS</b>: '||SQLERRM);
+        RAISE OTROS_ERRORES;
+    END;
+  END IF; -- IF Lb_Encontro THEN
+EXCEPTION
+  WHEN NOT_FOUND THEN
+    ROLLBACK;
+  WHEN OTROS_ERRORES THEN
+    ROLLBACK;
+END;]]></sql>
+				<binds>
+					<bind id="P_SOLICITUD">
+						<prompt><![CDATA[P_SOLICITUD]]></prompt>
+						<tooltip><![CDATA[P_SOLICITUD]]></tooltip>
+						<value><![CDATA[ITAU_CORRECCIONES_GAGC]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+				<pdf version="VERSION_1_7" compression="CONTENT">
+					<docproperty title="null" author="null" subject="null" keywords="null" />
+					<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+					<column>
+						<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+						<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+						<blob blob="NONE" zip="false" />
+					</column>
+					<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+					<header enable="false" generatedate="false">
+						<data>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						null																																																																																																																																																																														</data>
+					</header>
+					<footer enable="false" generatedate="false">
+						<data value="null" />
+					</footer>
+					<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+				</pdf>
+		</display>
+		<display id="d465d05d-015b-1000-8001-90016e875b57" type="" style="plsql-dbms_output" enable="true">
+			<name><![CDATA[Cambio de Nombre de Solicitud - SIGASI]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[DECLARE
+  Lv_NuevoNombre     Sg_Deltas.Solicitud_Changepoint%TYPE;
+  Lv_NombreAnterior  Sg_Deltas.Solicitud_Changepoint%TYPE;
+BEGIN
+  Lv_NuevoNombre    := :P_NuevoNombre;
+  Lv_NombreAnterior := :P_NombreAnterior;
+
+  UPDATE Sg_Deltas
+     SET Solicitud_Changepoint = Lv_NuevoNombre,
+         Nombre_Apk            = Lv_NuevoNombre || '.apk'
+   WHERE Solicitud_Changepoint = Lv_NombreAnterior;
+
+  IF SQL%NOTFOUND THEN
+    dbms_output.put_line('La Solicitud <b>'||Lv_NombreAnterior||'</b> no existe, Verifique!');
+  ELSE
+    COMMIT;
+    dbms_output.put_line('La Solicitud <b>'||Lv_NombreAnterior||'</b> cambio al nombre <b>'||Lv_NuevoNombre||'</b>');
+  END IF; -- IF SQL%NOTFOUND THEN
+END;]]></sql>
+				<binds>
+					<bind id="P_NuevoNombre">
+						<prompt><![CDATA[Nuevo Nombre de Solicitud:]]></prompt>
+						<tooltip><![CDATA[P_NuevoNombre]]></tooltip>
+						<value><![CDATA[COCRE-2015-00323_MOD2]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+					<bind id="P_NombreAnterior">
+						<prompt><![CDATA[Nombre de Solicitud:]]></prompt>
+						<tooltip><![CDATA[P_NombreAnterior]]></tooltip>
+						<value><![CDATA[COCRE-2015-00323_MOD1]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+				<pdf version="VERSION_1_7" compression="CONTENT">
+					<docproperty title="null" author="null" subject="null" keywords="null" />
+					<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+					<column>
+						<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+						<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+						<blob blob="NONE" zip="false" />
+					</column>
+					<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+					<header enable="false" generatedate="false">
+						<data>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						null																																																																																																</data>
+					</header>
+					<footer enable="false" generatedate="false">
+						<data value="null" />
+					</footer>
+					<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+				</pdf>
+		</display>
+	</folder>
+	<display id="7a57fc7f-0152-1000-8001-90016e87aee1" type="" style="Table" enable="true">
+		<name><![CDATA[Objetos por Solicitud - SIGASI]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT ArcExt.Delta_Id,
+       Del.Solicitud_Changepoint,
+       DECODE(ArcExt.Id_Tipo_Obj, 1,'FORMA NODO',
+                                  2,'FORMA AGEN',
+                                  3,'REPORTE AGEN',
+                                  4,'REPORTE NODO',
+                                  5,'TEMPLATES NODO FMB',
+                                  6,'TEMPLATES AGENCIA',
+                                  7,'LIBRERIA NODO',
+                                  8,'LIBRERIA AGEN',
+                                  9,'PROCEDIMIENTO NODO',
+                                 10,'PROCEDIMIENTO AGEN',
+                                 11,'FUNCION NODO',
+                                 12,'FUNCION AGEN',
+                                 13,'PAQUETE NODO',
+                                 14,'PAQUETE AGEN',
+                                 15,'TRIGGER NODO',
+                                 16,'TEMPLATES NODO RDF',
+                                 17,'TRIGGER AGEN',
+                                 18,'LIBRERIA WEB',
+                                 19,'VID FILE',
+                                 20,'DLL FILE',
+                                 21,'VISTAS AGEN',
+                                 22,'VISTAS NODO',
+                                 23,'DDL AGEN',
+                                 24,'DDL NODO',
+                                 25,'ABANKSGX class',
+                                 26,'ABANKSGX js',
+                                 27,'GXFLOW class',
+                                 28,'GXFLOW js',
+                                 29,'COLLECTOR class',
+                                 30,'COLLECTOR js',
+                                 31,'COLLECTOR jar',
+                                 32,'ABANKSGX jar',
+                                 33,'ABANKSGX Imagen',
+                                 34,'COLLECTOR Imagen',
+                                 35,'ABANKSGX rpt',
+                                 36,'RESOURCES ABK Imagen',
+                                 37,'Lista Imagen GXFLOW',
+                                 38,'Lista Imagen ABANKSGX',
+                                 39,'Lista Imagen COLLECTOR',
+                                 99,'Defina el tipo') AS Tipo_Objeto,
+         ArcExt.Nombresolo Nombre_Objeto,
+         Del.Etapas_Etapa Etapa_Del_Delta,
+         (SELECT Per.Nombre_Empleado||' '||Per.Apellido_Empleado FROM Sg_Personal Per WHERE Per.Usuario_Id = Del.Usuario_Id_Creadopor) AS Trabajado_Por,
+         Del.Fecha_Creacion Fecha_De_Carga,
+         (SELECT Cli.Nombre_Cliente From Sg_Clientes Cli WHERE Cli.Cliente_Id = Del.Cliente_Id) AS Nombre_Cliente,
+         Del.Nombre_Apk,
+         Del.Archivo_Apk,
+         Del.Descripcion Motivo_Carga
+    FROM Sg_Deltas Del, Sg_Archivos_Externos ArcExt
+   WHERE ArcExt.Delta_Id = Del.Id
+     AND ArcExt.Nombresolo LIKE '%'||UPPER(:P_OBJETO)||'%'
+ORDER BY 8 ASC, 1 DESC]]></sql>
+			<binds>
+				<bind id="P_OBJETO">
+					<prompt><![CDATA[Nombre de Objeto:]]></prompt>
+					<tooltip><![CDATA[P_OBJETO]]></tooltip>
+					<value><![CDATA[CA_K_CALCULO]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																											</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="e04ccaa8-0160-1000-8001-90016e1708ae" type="" style="Table" enable="true">
+		<name><![CDATA[Objeto por Solicitud - SIGASI]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[Objeto por Solicitud - SIGASI]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT Del.Id, Del.Solicitud_Changepoint "Solicitud del Changepoint",
+        (SELECT Per.Nombre_Empleado||' '||Per.Apellido_Empleado FROM Sg_Personal Per WHERE Per.Usuario_Id = Del.Usuario_Id_Creadopor) "Creado Por",
+         Del.Fecha_Creacion "Fecha de Creacion",
+         Del.Fecha_Modificacion "Fecha de Modificacion",
+         Del.Etapas_Etapa "Etapa del Delta",
+         (SELECT Cli.Nombre_Cliente From Sg_Clientes Cli WHERE Cli.Cliente_Id = Del.Cliente_Id) "Nombre del Cliente"
+    FROM Sg_Deltas Del
+   WHERE EXISTS (SELECT 1 FROM Sg_Archivos_Externos Arc WHERE Arc.Delta_Id = Del.Id AND UPPER(Arc.Nombresolo) = UPPER(:P_NombreArc))
+ORDER BY 2 ASC, 1 DESC]]></sql>
+			<binds>
+				<bind id="P_NombreArc">
+					<prompt><![CDATA[Nombre de Objeto:]]></prompt>
+					<tooltip><![CDATA[P_NombreArc]]></tooltip>
+					<value><![CDATA[BTD3469.fmb]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																													</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+</folder>
+</displays>

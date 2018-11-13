@@ -1,0 +1,52 @@
+
+SQL*Loader: Release 8.1.6.0.0 - Production on Tue May 8 16:48:25 2001
+
+(c) Copyright 1999 Oracle Corporation.  All rights reserved.
+
+Control File:   book.ctl
+Data File:      book.dat
+  Bad File:     book.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 65536 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table BOOK, loaded from every logical record.
+Insert option in effect for this table: REPLACE
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+BOOK_TITLE                              1    35           CHARACTER            
+BOOK_PRICE                             37     4           ZONED DECIMAL (4, 2) 
+    SQL string for column : "price_check(:book_price,:book_pages)"
+BOOK_PAGES                             42     3           CHARACTER            
+BOOK_ID                              NEXT     1           CHARACTER            
+    SQL string for column : "book_seq.nextval"
+
+
+Table BOOK:
+  4 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                   3968 bytes(64 rows)
+Space allocated for memory besides bind array:        0 bytes
+
+Total logical records skipped:          0
+Total logical records read:             4
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Tue May 08 16:48:25 2001
+Run ended on Tue May 08 16:48:26 2001
+
+Elapsed time was:     00:00:00.54
+CPU time was:         00:00:00.14    

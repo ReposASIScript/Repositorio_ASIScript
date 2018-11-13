@@ -1,0 +1,67 @@
+
+SQL*Loader: Release 8.1.6.0.0 - Production on Wed May 9 08:36:09 2001
+
+(c) Copyright 1999 Oracle Corporation.  All rights reserved.
+
+Control File:   coll_nest2.ctl
+Data File:      coll_nest2.dat
+  Bad File:     coll_nest2.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 65536 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table FEATURE_COUNTS, loaded from every logical record.
+Insert option in effect for this table: TRUNCATE
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+COUNTY                              FIRST     *   ,    "  CHARACTER            
+ARRAY_COUNT                          NEXT     *   ,       CHARACTER            
+  (FILLER FIELD)
+ARRAY_FILE                           NEXT     *   ,       CHARACTER            
+  (FILLER FIELD)
+FEATURE_COUNT                     DERIVED     *           VARRAY               
+    Count for VARRAY
+        ARRAY_COUNT
+    Dynamic Secondary Data File.  Filename in field ARRAY_FILE
+
+*** Fields in FEATURE_COUNT
+FEATURE_COUNTS                    DERIVED     *           COLUMN OBJECT        
+
+*** Fields in FEATURE_COUNT.FEATURE_COUNTS
+FEATURE_TYPE                        FIRST     *   :       CHARACTER            
+OCCURS                               NEXT     *   :       CHARACTER            
+*** End of fields in FEATURE_COUNT.FEATURE_COUNTS
+
+*** End of fields in FEATURE_COUNT
+
+STATE                                NEXT     *   ,       CHARACTER            
+
+
+Table FEATURE_COUNTS:
+  3 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                  65184 bytes(42 rows)
+Space allocated for memory besides bind array:        0 bytes
+
+Total logical records skipped:          0
+Total logical records read:             3
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Wed May 09 08:36:09 2001
+Run ended on Wed May 09 08:36:10 2001
+
+Elapsed time was:     00:00:00.27
+CPU time was:         00:00:00.16    

@@ -1,0 +1,53 @@
+
+SQL*Loader: Release 8.1.6.0.0 - Production on Tue May 8 15:13:25 2001
+
+(c) Copyright 1999 Oracle Corporation.  All rights reserved.
+
+Control File:   csv.ctl
+Data File:      csv.dat
+  Bad File:     csv.bad
+  Discard File:  none specified
+ 
+ (Allow all discards)
+
+Number to load: ALL
+Number to skip: 0
+Errors allowed: 50
+Bind array:     64 rows, maximum of 65536 bytes
+Continuation:    none specified
+Path used:      Conventional
+
+Table MICHIGAN_FEATURE_NAMES, loaded from every logical record.
+Insert option in effect for this table: REPLACE
+
+   Column Name                  Position   Len  Term Encl Datatype
+------------------------------ ---------- ----- ---- ---- ---------------------
+FEATURE_NAME                        FIRST     *   ,  O(") CHARACTER            
+FEATURE_TYPE                         NEXT     *   ,       CHARACTER            
+COUNTY                               NEXT     *   ,       CHARACTER            
+LATITUDE                             NEXT     *   ,       CHARACTER            
+LONGITUDE                            NEXT     *   ,       CHARACTER            
+ELEVATION                            NEXT     *   ,       CHARACTER            
+UPDATE_TIME                          NEXT     *   ,       DATE YYYYMMDDHH24MI  
+
+
+Table MICHIGAN_FEATURE_NAMES:
+  4 Rows successfully loaded.
+  0 Rows not loaded due to data errors.
+  0 Rows not loaded because all WHEN clauses were failed.
+  0 Rows not loaded because all fields were null.
+
+
+Space allocated for bind array:                  65016 bytes(36 rows)
+Space allocated for memory besides bind array:        0 bytes
+
+Total logical records skipped:          0
+Total logical records read:             4
+Total logical records rejected:         0
+Total logical records discarded:        0
+
+Run began on Tue May 08 15:13:25 2001
+Run ended on Tue May 08 15:13:26 2001
+
+Elapsed time was:     00:00:00.33
+CPU time was:         00:00:00.13    

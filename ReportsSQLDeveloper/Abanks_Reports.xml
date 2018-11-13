@@ -1,0 +1,2085 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<displays>
+<folder>
+	<name><![CDATA[ABANKS]]></name>
+	<tooltip><![CDATA[ABANKS]]></tooltip>
+	<description><![CDATA[ ]]></description>
+		<display id="3259077a-0141-1000-8006-90016e87254c" type="" style="Table" enable="true">
+		<name><![CDATA[Buscador de Mensajes Pre-Definidos de Abanks]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT idi.codigo_idioma,
+         DECODE(idi.codigo_idioma,1,'ESPANOL',2,'INGLES','OTRO') idioma,
+         idi.codigo_mensaje codigo,
+         NVL(idi.descripcion, men.causa) mensaje,
+         DECODE(men.parametro,'F','FIJO (F)','V','VARIABLE (V)','NO DEFINIDO') tipo_de_mensaje
+    FROM mg_mensajes_x_idiomas idi, mg_mensajes men
+   WHERE idi.codigo_mensaje (+) = men.codigo
+     AND ((:CODIGO IS NOT NULL AND men.codigo = :CODIGO)
+      OR  (:FRAGMENTO IS NOT NULL AND UPPER(NVL(idi.descripcion, men.causa)) LIKE '%'||UPPER(:FRAGMENTO)||'%')
+      OR  (:CODIGO IS NULL AND :FRAGMENTO IS NULL))
+ORDER BY 3 DESC, 1 ASC]]></sql>
+			<binds>
+				<bind id="CODIGO">
+					<prompt><![CDATA[Codigo de Mensaje:]]></prompt>
+					<tooltip><![CDATA[CODIGO]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="FRAGMENTO">
+					<prompt><![CDATA[Fragmento del Mensaje:]]></prompt>
+					<tooltip><![CDATA[FRAGMENTO]]></tooltip>
+					<value><![CDATA[Valor%dupli]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="" author="" subject="" keywords="" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				
+				
+				null																																																																																																																																																																																																																																																																																																																																																																																												</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+		<display id="" type="" style="Table" enable="true">
+			<name><![CDATA[Mensajes Secundarios]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+				<TYPE><![CDATA[horizontal]]></TYPE>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[SELECT codigo_parametro,
+         descripcion,
+         tipo
+    FROM Mg_Parametros_X_Mensaje Par
+   WHERE :TIPO_DE_MENSAJE = 'VARIABLE (V)'
+     AND Par.codigo_idioma = :CODIGO_IDIOMA
+ORDER BY 1]]></sql>
+				<binds>
+					<bind id="TIPO_DE_MENSAJE">
+						<prompt><![CDATA[TIPO_DE_MENSAJE]]></prompt>
+						<tooltip><![CDATA[TIPO_DE_MENSAJE]]></tooltip>
+						<value><![CDATA[NULL_VALUE]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+					<bind id="CODIGO_IDIOMA">
+						<prompt><![CDATA[CODIGO_IDIOMA]]></prompt>
+						<tooltip><![CDATA[CODIGO_IDIOMA]]></tooltip>
+						<value><![CDATA[NULL_VALUE]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+				<pdf version="VERSION_1_7" compression="CONTENT">
+					<docproperty title="null" author="null" subject="null" keywords="null" />
+					<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+					<column>
+						<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+						<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+						<blob blob="NONE" zip="false" />
+					</column>
+					<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+					<header enable="false" generatedate="false">
+						<data>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						null																																																																																																																																																																																																																																																																														</data>
+					</header>
+					<footer enable="false" generatedate="false">
+						<data value="null" />
+					</footer>
+					<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+				</pdf>
+		</display>
+	</display>
+	<display id="8fd13f3e-0145-1000-8001-90016e871a7b" type="" style="Table" enable="true">
+		<name><![CDATA[Clientes por Tipo]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT tip.codigo_tipo_cliente, tip.descripcion, DECODE(tip.persona_natural,'S','Natural','N','Juridica') tipo_persona
+    FROM mg_tipos_de_cliente tip
+ORDER BY 1]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="" author="" subject="" keywords="" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				null																																																																																																																																																																																																																																																																																																																	</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+		<display id="" type="" style="Table" enable="true">
+			<name><![CDATA[Listado de Clientes]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+				<TYPE><![CDATA[horizontal]]></TYPE>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[SELECT cli.codigo_cliente,
+         cli.codigo_tipo_identificacion,
+         cli.numero_identificacion,
+         cli.nombre_completo
+    FROM mg_clientes cli
+   WHERE cli.codigo_tipo_cliente = :CODIGO_TIPO_CLIENTE
+ORDER BY 1]]></sql>
+				<binds>
+					<bind id="CODIGO_TIPO_CLIENTE">
+						<prompt><![CDATA[CODIGO_TIPO_CLIENTE]]></prompt>
+						<tooltip><![CDATA[CODIGO_TIPO_CLIENTE]]></tooltip>
+						<value><![CDATA[NULL_VALUE]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+		</display>
+	</display>
+	<display id="8caf3c28-014d-1000-8001-90016e87990a" type="" style="Chart" enable="true">
+		<name><![CDATA[Cuentas por Próducto]]></name>
+		<description><![CDATA[Muestreo gráfico con el conteo de cuentas por módulo que tiene registradas el sistema.]]></description>
+		<tooltip><![CDATA[Muestreo gráfico con el conteo de cuentas por módulo que tiene registradas el sistema.]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<LEGEND><![CDATA[true]]></LEGEND>
+			<THREED><![CDATA[true]]></THREED>
+			<GRID><![CDATA[true]]></GRID>
+			<STYLE><![CDATA[Default]]></STYLE>
+			<GRADIENT><![CDATA[true]]></GRADIENT>
+			<TYPE><![CDATA[BAR_VERT_CLUST]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT cue.codigo_aplicacion,
+       cue.codigo_aplicacion,
+       COUNT(*) cantidad
+    FROM mg_cuentas cue
+GROUP BY cue.codigo_aplicacion, cue.codigo_aplicacion
+ORDER BY 2, 3]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="Porcentaje de Cuentas Aperturadas por Próducto" author="Gilberto Guerrero" subject="" keywords="" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				null																																																																																																																																																																																																																																																																																																																																																																																					</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="90c81951-0142-1000-8001-90016e8760d6" type="" style="Table" enable="true">
+		<name><![CDATA[Log de Procesos de Cierre]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT pro.fecha, pro.linea, pro.texto
+    FROM mg_log_proceso pro
+   WHERE (:P_Aplicacion IS NULL OR pro.codigo_aplicacion = UPPER(:P_Aplicacion))
+     AND (:P_Proceso    IS NULL OR pro.numero_proceso    = :P_Proceso)
+     AND (:P_Fecha      IS NULL OR pro.fecha             = :P_Fecha)
+ORDER BY 1 DESC, 2 ASC]]></sql>
+			<binds>
+				<bind id="P_Aplicacion">
+					<prompt><![CDATA[P_Aplicacion]]></prompt>
+					<tooltip><![CDATA[P_Aplicacion]]></tooltip>
+					<value><![CDATA[BPR]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="P_Proceso">
+					<prompt><![CDATA[P_Proceso]]></prompt>
+					<tooltip><![CDATA[P_Proceso]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="P_Fecha">
+					<prompt><![CDATA[P_Fecha]]></prompt>
+					<tooltip><![CDATA[P_Fecha]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="" author="" subject="" keywords="" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				null																																																																																																																																																																																																																																																																																																																													</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="2fa78ccf-014d-1000-8003-90016e87ebd5" type="" style="Table" enable="true">
+		<name><![CDATA[Movimientos Anuales Descuadrados (BGM)]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT usuario, numero_movimiento, fecha_movimiento,
+         SUM(DECODE(debito_credito,'D',DECODE(codigo_moneda,1,monto_movimiento,monto_movimiento_local),
+                                   'C',DECODE(codigo_moneda,1,ABS(monto_movimiento)*-1,ABS(monto_movimiento_local)*-1))) valor
+    FROM gm_movimientos_anual_detalle
+  HAVING SUM(DECODE(debito_credito,'D',DECODE(codigo_moneda,1,monto_movimiento,monto_movimiento_local),
+                                   'C',DECODE(codigo_moneda,1,ABS(monto_movimiento)*-1,ABS(monto_movimiento_local)*-1))) != 0
+GROUP BY usuario, numero_movimiento, fecha_movimiento
+ORDER BY fecha_movimiento DESC, usuario ASC]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="" author="" subject="" keywords="" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				null																																																																																																																																																																																																																																																																																																					</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="c8a280c0-014c-1000-8001-90016e871d9d" type="" style="Table" enable="true">
+		<name><![CDATA[Movimientos Detalle Descuadrados (BGM)]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT usuario, numero_movimiento, fecha_movimiento,
+         SUM(DECODE(debito_credito,'D',DECODE(codigo_moneda,1,monto_movimiento,monto_movimiento_local),
+                                   'C',DECODE(codigo_moneda,1,ABS(monto_movimiento)*-1,ABS(monto_movimiento_local)*-1))) valor
+    FROM gm_movimientos_detalle 
+  HAVING SUM(DECODE(debito_credito,'D',DECODE(codigo_moneda,1,monto_movimiento,monto_movimiento_local),
+                                   'C',DECODE(codigo_moneda,1,ABS(monto_movimiento)*-1,ABS(monto_movimiento_local)*-1))) != 0
+GROUP BY usuario, numero_movimiento, fecha_movimiento
+ORDER BY fecha_movimiento DESC, usuario ASC]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="" author="" subject="" keywords="" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				null																																																																																																																																																																																																																																																																																																													</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="2fa8981e-014d-1000-8004-90016e87ebd5" type="" style="Table" enable="true">
+		<name><![CDATA[Movimientos Mensuales Descuadrados (BGM)]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT usuario, numero_movimiento, fecha_movimiento,
+         SUM(DECODE(debito_credito,'D',DECODE(codigo_moneda,1,monto_movimiento,monto_movimiento_local),
+                                   'C',DECODE(codigo_moneda,1,ABS(monto_movimiento)*-1,ABS(monto_movimiento_local)*-1))) valor
+    FROM gm_movimientos_mes_detalle
+  HAVING SUM(DECODE(debito_credito,'D',DECODE(codigo_moneda,1,monto_movimiento,monto_movimiento_local),
+                                   'C',DECODE(codigo_moneda,1,ABS(monto_movimiento)*-1,ABS(monto_movimiento_local)*-1))) != 0
+GROUP BY usuario, numero_movimiento, fecha_movimiento
+ORDER BY fecha_movimiento DESC, usuario ASC]]></sql>
+		</query>
+	</display>
+	<display id="610949e3-0141-1000-8011-90016e870b97" type="" style="Chart" enable="true">
+		<name><![CDATA[Situaciones de las Cuentas (BCA)]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<LEGEND><![CDATA[true]]></LEGEND>
+			<THREED><![CDATA[true]]></THREED>
+			<GRID><![CDATA[true]]></GRID>
+			<STYLE><![CDATA[Financial]]></STYLE>
+			<GRADIENT><![CDATA[true]]></GRADIENT>
+			<TYPE><![CDATA[BAR_VERT_STACK]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT DECODE(aho.inactiva,'1','Inactiva',
+                             '0', DECODE(aho.situacion_en_linea,'0','Vigente',
+                                                                '1','Cancelada',
+                                                                '2','Bloqueada',
+                                                                '3','Embargada',
+                                                                '4','Pignorada',
+                                                                '5','Pendiente')),
+         DECODE(aho.inactiva,'1','Inactiva',
+                             '0', DECODE(aho.situacion_en_linea,'0','Vigente',
+                                                                '1','Cancelada',
+                                                                '2','Bloqueada',
+                                                                '3','Embargada',
+                                                                '4','Pignorada',
+                                                                '5','Pendiente')),
+         COUNT(*) cantidad2
+    FROM ca_cuentas_de_ahorro aho
+GROUP BY DECODE(aho.inactiva,'1','Inactiva',
+                             '0', DECODE(aho.situacion_en_linea,'0','Vigente',
+                                                                '1','Cancelada',
+                                                                '2','Bloqueada',
+                                                                '3','Embargada',
+                                                                '4','Pignorada',
+                                                                '5','Pendiente')),
+         DECODE(aho.inactiva,'1','Inactiva',
+                             '0', DECODE(aho.situacion_en_linea,'0','Vigente',
+                                                                '1','Cancelada',
+                                                                '2','Bloqueada',
+                                                                '3','Embargada',
+                                                                '4','Pignorada',
+                                                                '5','Pendiente'))
+ORDER BY 1 DESC]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="" author="" subject="" keywords="" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				null																																																																																																																																																																																																																																																																																																																																																																	</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="15c664f1-0142-1000-8013-90016e877612" type="" style="Chart" enable="true">
+		<name><![CDATA[Situaciones de las Cuentas (BCC)]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<LEGEND><![CDATA[true]]></LEGEND>
+			<THREED><![CDATA[true]]></THREED>
+			<GRID><![CDATA[true]]></GRID>
+			<STYLE><![CDATA[Financial]]></STYLE>
+			<GRADIENT><![CDATA[true]]></GRADIENT>
+			<TYPE><![CDATA[BAR_VERT_STACK]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT DECODE(dep.inactiva,'1','Inactiva',
+                             '0', DECODE(dep.situacion_en_linea,'0','Vigente',
+                                                                '1','Cancelada',
+                                                                '2','Bloqueada',
+                                                                '3','Embargada',
+                                                                '4','Pignorada',
+                                                                '5','Pendiente')),
+         DECODE(dep.inactiva,'1','Inactiva',
+                             '0', DECODE(dep.situacion_en_linea,'0','Vigente',
+                                                                '1','Cancelada',
+                                                                '2','Bloqueada',
+                                                                '3','Embargada',
+                                                                '4','Pignorada',
+                                                                '5','Pendiente')),
+         COUNT(*) cantidad2
+    FROM cc_depositos_monetarios dep
+GROUP BY DECODE(dep.inactiva,'1','Inactiva',
+                             '0', DECODE(dep.situacion_en_linea,'0','Vigente',
+                                                                '1','Cancelada',
+                                                                '2','Bloqueada',
+                                                                '3','Embargada',
+                                                                '4','Pignorada',
+                                                                '5','Pendiente')),
+         DECODE(dep.inactiva,'1','Inactiva',
+                             '0', DECODE(dep.situacion_en_linea,'0','Vigente',
+                                                                '1','Cancelada',
+                                                                '2','Bloqueada',
+                                                                '3','Embargada',
+                                                                '4','Pignorada',
+                                                                '5','Pendiente'))
+ORDER BY 1 DESC]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="" author="" subject="" keywords="" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				null																																																																																																																																																																																																																																																																																																																																					</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="e4c60970-0143-1000-8005-90016e87e6b4" type="" style="Table" enable="true">
+		<name><![CDATA[Transacciones Autorizadas por Usuario]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT usu.codigo_usuario,
+       usu.password,
+       INITCAP(usu.nombres)||' '||INITCAP(usu.primer_apellido)||' '||INITCAP(usu.segundo_apellido) nombre_completo,
+       (SELECT age.nombre_agencia FROM mg_agencias age WHERE age.codigo_agencia = usu.codigo_agencia) agencia_origen
+    FROM mg_usuarios_del_sistema usu
+   WHERE (:P_USUARIO IS NOT NULL AND usu.codigo_usuario = :P_USUARIO) OR :P_USUARIO IS NULL
+ORDER BY 1]]></sql>
+			<binds>
+				<bind id="P_USUARIO">
+					<prompt><![CDATA[P_USUARIO]]></prompt>
+					<tooltip><![CDATA[P_USUARIO]]></tooltip>
+					<value><![CDATA[DPESUL2]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="" author="" subject="" keywords="" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				null																																																																																																																																																																																																																																																																																																																					</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+		<display id="" type="" style="Table" enable="true">
+			<name><![CDATA[Transacciones por Usuario]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+				<TYPE><![CDATA[horizontal]]></TYPE>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[SELECT tra.codigo_aplicacion,
+       tra.codigo_tipo_transaccion,
+       tra.codigo_segun_banco,
+       tra.descripcion,
+       DECODE(tra.debito_credito_otro,'D','Debito','C','Credito','O','Otros') naturaleza,
+       DECODE(tra.tipo_operacion,'1','Deposito','2','Cheques o Retiros','3','Nota DR o CR','4','No Afecta Saldo','5','Afecta Intereses') tipo_operacion,
+       DECODE(tra.nivel_de_uso,'C','Cajero','I','Interno','S','Supervisor','O','Otros','T','ATM/POS') nivel_de_uso,
+       (SELECT age.nombre_agencia FROM mg_agencias age WHERE age.codigo_agencia = ofi.codigo_agencia) nombre_agencia,
+       TRIM(TO_CHAR(ofi.monto_autorizado,'999,999,999,999,999,999.00')) monto_autorizado
+  FROM mg_tipos_de_transacciones tra, mg_oficiales_x_transaccion ofi
+ WHERE tra.codigo_aplicacion       = ofi.codigo_aplicacion
+   AND tra.codigo_tipo_transaccion = ofi.codigo_tipo_transaccion
+   AND ofi.codigo_usuario          = :CODIGO_USUARIO
+ORDER BY ofi.codigo_aplicacion, ofi.codigo_tipo_transaccion, ofi.codigo_agencia]]></sql>
+				<binds>
+					<bind id="CODIGO_USUARIO">
+						<prompt><![CDATA[CODIGO_USUARIO]]></prompt>
+						<tooltip><![CDATA[CODIGO_USUARIO]]></tooltip>
+						<value><![CDATA[NULL_VALUE]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+				<pdf version="VERSION_1_7" compression="CONTENT">
+					<docproperty title="" author="" subject="" keywords="" />
+					<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+					<column>
+						<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+						<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+						<blob blob="NONE" zip="false" />
+					</column>
+					<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+					<header enable="false" generatedate="false">
+						<data>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																																																																																																																																																																					</data>
+					</header>
+					<footer enable="false" generatedate="false">
+						<data value="null" />
+					</footer>
+					<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+				</pdf>
+		</display>
+	</display>
+	<display id="055ada80-0145-1000-8002-0a11f9ce220d" type="" style="plsql-dbms_output" enable="true">
+		<name><![CDATA[Vouchers de Ventanilla]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[DECLARE
+  CURSOR c_impresiones IS
+    SELECT imp.data_salida
+      FROM mc_datos_impresion imp
+     WHERE imp.secuencia_impresion = (SELECT MAX(qry.secuencia_impresion)
+                                        FROM mc_datos_impresion qry
+                                       WHERE qry.secuencia_impresion = NVL(:p_secuencia_impresion,qry.secuencia_impresion))
+  ORDER BY imp.secuencia_impresion DESC, imp.numero_linea ASC;
+BEGIN
+  dbms_output.enable(NULL);
+
+  FOR i IN c_impresiones LOOP
+    dbms_output.put_line('<p>'||i.data_salida||'</p>');
+  END LOOP;
+END;]]></sql>
+			<binds>
+				<bind id="p_secuencia_impresion">
+					<prompt><![CDATA[p_secuencia_impresion]]></prompt>
+					<tooltip><![CDATA[p_secuencia_impresion]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="" author="" subject="" keywords="" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="Times New Roman" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="Times New Roman" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+				
+				
+				
+				
+				
+				
+				
+				
+				
+				
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																																																																																																																																																																																						</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="74d95fa9-014f-1000-8001-90016e8776f6" type="" style="Table" enable="true">
+		<name><![CDATA[Cheques Desglosados (JFK)]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT Mov.Codigo_Empresa,
+             Mov.Codigo_Agencia,
+             Mov.Codigo_Aplicacion,
+             Mov.Codigo_Sub_Aplicacion,
+             Mov.Numero_Cuenta,
+             Doc.Numero_Documento,
+             Doc.Codigo_Cuenta,
+             Doc.Valor,
+             Doc.Fecha_Valida Fecha_Reserva,
+             Doc.Codigo_Tipo_Rechazo,
+             Doc.Codigo_Tipo_Canje Codigo_Tipo_Reserva,
+             Doc.Tipo_Financiera,
+             Doc.Codigo_Financiera,
+             Doc.Codigo_Agencia_Origen,
+             (SELECT Cli.Nombre_Completo FROM Mg_Clientes Cli WHERE Cli.Codigo_Cliente = Mov.Cliente_Relacionado) AS Nombre_Cliente,
+             Doc.Secuencia_Movimiento,
+             Doc.Secuencia_Desglose,
+             Mov.Codigo_Usuario,
+             Mov.Codigo_Moneda,
+             Doc.Fecha_Devolucion,
+             Doc.Secuencia_Deposito
+        FROM Mc_Movimientos_Diarios Mov, Mc_Desglose_Movimientos Des, Mc_Desglose_Documentos Doc
+       WHERE Mov.Secuencia_Movimiento          = Des.Secuencia_Movimiento
+         AND Mov.Codigo_Usuario                = Des.Codigo_Usuario
+         AND Des.Secuencia_Movimiento_Desglose = Doc.Secuencia_Movimiento
+         AND Des.Codigo_Usuario                = Doc.Codigo_Usuario
+         AND Des.Codigo_Tipo_Rubro             = Doc.Codigo_Tipo_Rubro
+         AND Mov.Codigo_Empresa                = :Pn_CodigoEmpresa
+         AND Mov.Agencia_Origen                = :Pn_CodigoAgenciaOrigen
+         AND Mov.Codigo_Aplicacion             = NVL(:Pv_CodigoAplicacionCta,   Mov.Codigo_Aplicacion)
+         AND Mov.Cliente_Relacionado           = NVL(:Pn_CodigoCliente,         Mov.Cliente_Relacionado)
+         AND Doc.Codigo_Financiera             = NVL(:Pn_Codigo_Financiera,     Doc.Codigo_Financiera)
+         AND Doc.Numero_Documento              = NVL(:Pn_Numero_Documento,      Doc.Numero_Documento)
+         AND Doc.Codigo_Cuenta                 = NVL(:Pn_Codigo_Cuenta,         Doc.Codigo_Cuenta)
+         AND Doc.Valor                         = NVL(:Pn_Valor,                 Doc.Valor)
+         AND Doc.Fecha_Valida                  = NVL(:Pd_Fecha_Reserva,         Doc.Fecha_Valida)
+         AND Doc.Codigo_Tipo_Canje             = NVL(:Pn_Codigo_Tipo_Reserva,   Doc.Codigo_Tipo_Canje)
+         AND Mov.Codigo_Agencia                = NVL(:Pn_Codigo_Agencia,        Mov.Codigo_Agencia)
+         AND Mov.Codigo_Sub_Aplicacion         = NVL(:Pn_Codigo_Sub_Aplicacion, Mov.Codigo_Sub_Aplicacion)
+         AND Mov.Numero_Cuenta                 = NVL(:Pn_Numero_Cuenta,         Mov.Numero_Cuenta)
+         AND NVL(Doc.Devuelto,'N')             = :Pv_Devuelto
+         AND NVL(Doc.Liberado,'N')             = :Pv_Liberado
+         AND Doc.Secuencia_Deposito            IS NOT NULL
+    ORDER BY 16, 13, 6]]></sql>
+			<binds>
+				<bind id="Pn_CodigoEmpresa">
+					<prompt><![CDATA[Pn_CodigoEmpresa]]></prompt>
+					<tooltip><![CDATA[Pn_CodigoEmpresa]]></tooltip>
+					<value><![CDATA[1]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="Pn_CodigoAgenciaOrigen">
+					<prompt><![CDATA[Pn_CodigoAgenciaOrigen]]></prompt>
+					<tooltip><![CDATA[Pn_CodigoAgenciaOrigen]]></tooltip>
+					<value><![CDATA[1]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="Pv_CodigoAplicacionCta">
+					<prompt><![CDATA[Pv_CodigoAplicacionCta]]></prompt>
+					<tooltip><![CDATA[Pv_CodigoAplicacionCta]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="Pn_CodigoCliente">
+					<prompt><![CDATA[Pn_CodigoCliente]]></prompt>
+					<tooltip><![CDATA[Pn_CodigoCliente]]></tooltip>
+					<value><![CDATA[793]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="Pn_Codigo_Financiera">
+					<prompt><![CDATA[Pn_Codigo_Financiera]]></prompt>
+					<tooltip><![CDATA[Pn_Codigo_Financiera]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="Pn_Numero_Documento">
+					<prompt><![CDATA[Pn_Numero_Documento]]></prompt>
+					<tooltip><![CDATA[Pn_Numero_Documento]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="Pn_Codigo_Cuenta">
+					<prompt><![CDATA[Pn_Codigo_Cuenta]]></prompt>
+					<tooltip><![CDATA[Pn_Codigo_Cuenta]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="Pn_Valor">
+					<prompt><![CDATA[Pn_Valor]]></prompt>
+					<tooltip><![CDATA[Pn_Valor]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="Pd_Fecha_Reserva">
+					<prompt><![CDATA[Pd_Fecha_Reserva]]></prompt>
+					<tooltip><![CDATA[Pd_Fecha_Reserva]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="Pn_Codigo_Tipo_Reserva">
+					<prompt><![CDATA[Pn_Codigo_Tipo_Reserva]]></prompt>
+					<tooltip><![CDATA[Pn_Codigo_Tipo_Reserva]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="Pn_Codigo_Agencia">
+					<prompt><![CDATA[Pn_Codigo_Agencia]]></prompt>
+					<tooltip><![CDATA[Pn_Codigo_Agencia]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="Pn_Codigo_Sub_Aplicacion">
+					<prompt><![CDATA[Pn_Codigo_Sub_Aplicacion]]></prompt>
+					<tooltip><![CDATA[Pn_Codigo_Sub_Aplicacion]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="Pn_Numero_Cuenta">
+					<prompt><![CDATA[Pn_Numero_Cuenta]]></prompt>
+					<tooltip><![CDATA[Pn_Numero_Cuenta]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="Pv_Devuelto">
+					<prompt><![CDATA[Pv_Devuelto]]></prompt>
+					<tooltip><![CDATA[Pv_Devuelto]]></tooltip>
+					<value><![CDATA[S]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="Pv_Liberado">
+					<prompt><![CDATA[Pv_Liberado]]></prompt>
+					<tooltip><![CDATA[Pv_Liberado]]></tooltip>
+					<value><![CDATA[N]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																																																												</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="99a078f0-014f-1000-8003-90016e8795fb" type="" style="Table" enable="true">
+		<name><![CDATA[Catalogo de Replicación]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT Cat.Codigo_Catalogo,
+         Cat.Nombre_Tabla_Regional AS Tabla_Nodo,
+         Cat.Nombre_Tabla_Agencia  AS Tabla_Agencia,
+         Cat.Codigo_Aplicacion,
+         DECODE(Cat.Inserts,'S','Si','N','No') AS Replicar_Insercion,
+         DECODE(Cat.Updates,'S','Si','N','No') AS Replicar_Actualizaciones,
+         DECODE(Cat.Deletes,'S','Si','N','No') AS Replicar_Eliminaciones
+    FROM Nr_Catalogos Cat
+   WHERE (Cat.Codigo_Catalogo = :P_CATALOGO OR :P_CATALOGO IS NULL)
+     AND (Cat.Codigo_Aplicacion = UPPER(:P_APLICACION) OR :P_APLICACION IS NULL)
+ORDER BY 4, 2]]></sql>
+			<binds>
+				<bind id="P_CATALOGO">
+					<prompt><![CDATA[Codigo de Catalogo:]]></prompt>
+					<tooltip><![CDATA[P_CATALOGO]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="P_APLICACION">
+					<prompt><![CDATA[Codigo de Aplicación:]]></prompt>
+					<tooltip><![CDATA[P_APLICACION]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																																			</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+		<display id="" type="" style="Table" enable="true">
+			<name><![CDATA[Detalle de Campos a Replicar]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+				<TYPE><![CDATA[horizontal]]></TYPE>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[SELECT Det.Posicion_Columna,
+         Det.Posicion_Llave,
+         Det.Columna_Regional AS Columna_Tabla_Nodo,
+         Det.Columna_Agencia  AS Columna_Tabla_Agencia,
+         Det.Tipo_Dato
+    FROM Nr_Detalle_Catalogos Det
+   WHERE Det.Codigo_Catalogo = :CODIGO_CATALOGO
+ORDER BY 1]]></sql>
+				<binds>
+					<bind id="CODIGO_CATALOGO">
+						<prompt><![CDATA[CODIGO_CATALOGO]]></prompt>
+						<tooltip><![CDATA[CODIGO_CATALOGO]]></tooltip>
+						<value><![CDATA[NULL_VALUE]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
+			</query>
+				<pdf version="VERSION_1_7" compression="CONTENT">
+					<docproperty title="null" author="null" subject="null" keywords="null" />
+					<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+					<column>
+						<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+						<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+						<blob blob="NONE" zip="false" />
+					</column>
+					<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+					<header enable="false" generatedate="false">
+						<data>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						null																																																																																																																																																																																																																																										</data>
+					</header>
+					<footer enable="false" generatedate="false">
+						<data value="null" />
+					</footer>
+					<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+				</pdf>
+		</display>
+		<display id="" type="" style="Table" enable="true">
+			<name><![CDATA[Registros Replicados]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+				<TYPE><![CDATA[horizontal]]></TYPE>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[SELECT Nov.Secuencia Secuencia_Novedad,
+         Nov.Datos1 Valor_Replicar1,
+         Nov.Datos2 Valor_Replicar2,
+         Nov.Datos3 Valor_Replicar3,
+         Nov.Datos4 Valor_Replicar4,
+         Nov.Datos5 Valor_Replicar5,
+         DECODE(Nov.Operacion,'I','Insert','U','Update','D','Delete') AS Tipo_Operacion,
+         Nov.Fecha_Hora,
+         Nov.Llave_Primaria Valores_Claves
+    FROM Nr_Novedades Nov
+   WHERE Nov.Codigo_Catalogo = :CODIGO_CATALOGO
+ORDER BY 1 DESC]]></sql>
+			</query>
+				<pdf version="VERSION_1_7" compression="CONTENT">
+					<docproperty title="null" author="null" subject="null" keywords="null" />
+					<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+					<column>
+						<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+						<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+						<blob blob="NONE" zip="false" />
+					</column>
+					<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+					<header enable="false" generatedate="false">
+						<data>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						null																																																																																																																																																																																																																																										</data>
+					</header>
+					<footer enable="false" generatedate="false">
+						<data value="null" />
+					</footer>
+					<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+				</pdf>
+		</display>
+		<display id="" type="" style="Table" enable="true">
+			<name><![CDATA[Registros con Error (Agencia)]]></name>
+			<description><![CDATA[]]></description>
+			<tooltip><![CDATA[]]></tooltip>
+			<drillclass><![CDATA[]]></drillclass>
+			<CustomValues>
+				<TYPE><![CDATA[horizontal]]></TYPE>
+			</CustomValues>
+			<query>
+				<sql><![CDATA[SELECT Err.Secuencia Secuencia_Novedad,
+         Err.Datos1 Valor_Replicar1,
+         Err.Datos2 Valor_Replicar2,
+         Err.Datos3 Valor_Replicar3,
+         Err.Datos4 Valor_Replicar4,
+         Err.Datos5 Valor_Replicar5,
+         DECODE(Err.Operacion,'I','Insert','U','Update','D','Delete') AS Tipo_Operacion,
+         Err.Fecha_Hora,
+         Err.Llave_Primaria Valores_Claves,
+         Err.Codigo_Error
+    FROM Nr_Errores@agencia.v716.com Err
+   WHERE Err.Codigo_Catalogo = :CODIGO_CATALOGO
+ORDER BY 1 DESC]]></sql>
+			</query>
+				<pdf version="VERSION_1_7" compression="CONTENT">
+					<docproperty title="null" author="null" subject="null" keywords="null" />
+					<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+					<column>
+						<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+						<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+						<blob blob="NONE" zip="false" />
+					</column>
+					<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+					<header enable="false" generatedate="false">
+						<data>
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						
+						null																																																																																																																																																																																																																																				</data>
+					</header>
+					<footer enable="false" generatedate="false">
+						<data value="null" />
+					</footer>
+					<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+				</pdf>
+		</display>
+	</display>
+	<display id="244126e1-0157-1000-8001-90016e8708c0" type="" style="Table" enable="true">
+		<name><![CDATA[Cuentas Replicadas Correctamente (BCA)]]></name>
+		<description><![CDATA[Reporte que permite identificar en agencia, que cuentas se encuentrar replicadas correctamente de nodo.]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT cue.codigo_empresa,
+         cue.codigo_agencia,
+         cue.codigo_aplicacion,
+         cue.codigo_sub_aplicacion,
+         cue.codigo_cuenta,
+         cue.codigo_cliente,
+         cue.estado_cuenta
+    FROM mg_cuentas cue
+   WHERE EXISTS (SELECT 1
+                   FROM ca_cuentas_de_ahorro@nodo.v716.com aho
+                  WHERE aho.numero_cuenta        = cue.codigo_cuenta
+                    AND aho.codigo_subaplicacion = cue.codigo_sub_aplicacion
+                    AND aho.codigo_aplicacion    = cue.codigo_aplicacion
+                    AND aho.codigo_agencia       = cue.codigo_agencia
+                    AND aho.codigo_empresa       = cue.codigo_empresa
+                  UNION
+                 SELECT 1
+                   FROM cc_depositos_monetarios@nodo.v716.com dep
+                  WHERE dep.numero_cuenta        = cue.codigo_cuenta
+                    AND dep.codigo_subaplicacion = cue.codigo_sub_aplicacion
+                    AND dep.codigo_aplicacion    = cue.codigo_aplicacion
+                    AND dep.codigo_agencia       = cue.codigo_agencia
+                    AND dep.codigo_empresa       = cue.codigo_empresa)
+     AND cue.codigo_aplicacion IN ('BCA','BCC')
+     AND cue.estado_cuenta    = '0'
+ORDER BY 1, 2, 3, 4, 5]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																		</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="95243f49-0161-1000-8001-a9fea4e0ca1c" type="" style="Table" enable="true">
+		<name><![CDATA[Listado de Secuencias de Escape - ABANKS]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[Listado de Secuencias de Escape - ABANKS]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT codigo_escape, descripcion, comando, ASCII(SUBSTR(comando,1,1))||' '||
+                                            ASCII(SUBSTR(comando,2,1))||' '||
+                                            ASCII(SUBSTR(comando,3,1))||' '||
+                                            ASCII(SUBSTR(comando,4,1)) AS comando_ascii
+  FROM mc_secuencia_escape
+ORDER BY 1]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					null										</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+</folder>
+</displays>
