@@ -120,11 +120,17 @@ ORDER BY 1]]></sql>
 					
 					
 					
+					
+					
+					
+					
+					
+					
 				
 				
 				
 				
-				null																																																																																																																																																																																																																																																																																																							</data>
+				null																																																																																																																																																																																																																																																																																																																																					</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -226,7 +232,13 @@ ORDER BY Doc.Documento_Id DESC]]></sql>
 					
 					
 					
-					null																																																																																																																																																																																																																																																																																			</data>
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																																																																																																	</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -317,10 +329,16 @@ ORDER BY 1]]></sql>
 					
 					
 					
+					
+					
+					
+					
+					
+					
 				
 				
 				
-				null																																																																																																																																																																																																																																																																																																			</data>
+				null																																																																																																																																																																																																																																																																																																																																	</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -417,10 +435,16 @@ ORDER BY 1 DESC]]></sql>
 						
 						
 						
+						
+						
+						
+						
+						
+						
 					
 					
 					
-					null																																																																																																																																																																																																																																																																																																																																																														</data>
+					null																																																																																																																																																																																																																																																																																																																																																																																																		</data>
 					</header>
 					<footer enable="false" generatedate="false">
 						<data value="null" />
@@ -454,7 +478,7 @@ ORDER BY 1 DESC]]></sql>
 				<bind id="P_SOLICITUD">
 					<prompt><![CDATA[Solicitud de Changepoint]]></prompt>
 					<tooltip><![CDATA[P_SOLICITUD]]></tooltip>
-					<value><![CDATA[PESUL-2014-00371%]]></value>
+					<value><![CDATA[PESUL-2016-00294%]]></value>
 					<bracket><![CDATA[null]]></bracket>
 				</bind>
 			</binds>
@@ -525,8 +549,14 @@ ORDER BY 1 DESC]]></sql>
 					
 					
 					
+					
+					
+					
+					
+					
+					
 				
-				null																																																																																																																																																																																																																																																																																											</data>
+				null																																																																																																																																																																																																																																																																																																																									</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -663,8 +693,14 @@ ORDER BY ArcExt.Orden ASC]]></sql>
 						
 						
 						
+						
+						
+						
+						
+						
+						
 					
-					null																																																																																																																																																																																																																																																																																																																																																				</data>
+					null																																																																																																																																																																																																																																																																																																																																																																																								</data>
 					</header>
 					<footer enable="false" generatedate="false">
 						<data value="null" />
@@ -763,7 +799,13 @@ ORDER BY Doc.Documento_Id]]></sql>
 						
 						
 						
-					null																																																																																																																																																																																																																																																																																																																																															</data>
+						
+						
+						
+						
+						
+						
+					null																																																																																																																																																																																																																																																																																																																																																																																			</data>
 					</header>
 					<footer enable="false" generatedate="false">
 						<data value="null" />
@@ -847,7 +889,13 @@ ORDER BY Eve.Evento_Id DESC]]></sql>
 						
 						
 						
-						null																																																																																																																																																																																																																																																</data>
+						
+						
+						
+						
+						
+						
+						null																																																																																																																																																																																																																																																																																				</data>
 					</header>
 					<footer enable="false" generatedate="false">
 						<data value="null" />
@@ -943,8 +991,14 @@ ORDER BY Eve.Evento_Id DESC]]></sql>
 					
 					
 					
+					
+					
+					
+					
+					
+					
 				
-				null																																																																																																																																																																																																																																																																																											</data>
+				null																																																																																																																																																																																																																																																																																																																									</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -1041,8 +1095,14 @@ ORDER BY NVL(ArcExt.Orden, ArcExt.Id_Tipo_Obj)]]></sql>
 						
 						
 						
+						
+						
+						
+						
+						
+						
 					
-					null																																																																																																																																																																																																																																																																																																																																																				</data>
+					null																																																																																																																																																																																																																																																																																																																																																																																								</data>
 					</header>
 					<footer enable="false" generatedate="false">
 						<data value="null" />
@@ -1137,7 +1197,13 @@ ORDER BY 1]]></sql>
 					
 					
 					
-					null																																																																																																																																																																																																																																																																														</data>
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																																																																																												</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -1289,7 +1355,13 @@ END;]]></sql>
 						
 						
 						
-						null																																																																																																																																																																																																																																																																								</data>
+						
+						
+						
+						
+						
+						
+						null																																																																																																																																																																																																																																																																																																												</data>
 					</header>
 					<footer enable="false" generatedate="false">
 						<data value="null" />
@@ -1381,10 +1453,16 @@ COMMIT
 						
 						
 						
+						
+						
+						
+						
+						
+						
 					
 					
 					
-					null																																																																																																																																																																																																																																																																																												</data>
+					null																																																																																																																																																																																																																																																																																																																																</data>
 					</header>
 					<footer enable="false" generatedate="false">
 						<data value="null" />
@@ -1541,7 +1619,13 @@ END;]]></sql>
 						
 						
 						
-						null																																																																																																																																																																																																												</data>
+						
+						
+						
+						
+						
+						
+						null																																																																																																																																																																																																																																																</data>
 					</header>
 					<footer enable="false" generatedate="false">
 						<data value="null" />
@@ -1662,7 +1746,13 @@ END;]]></sql>
 						
 						
 						
-						null																																																																																																																																																																														</data>
+						
+						
+						
+						
+						
+						
+						null																																																																																																																																																																																																																		</data>
 					</header>
 					<footer enable="false" generatedate="false">
 						<data value="null" />
@@ -1738,7 +1828,13 @@ END;]]></sql>
 						
 						
 						
-						null																																																																																																</data>
+						
+						
+						
+						
+						
+						
+						null																																																																																																																																				</data>
 					</header>
 					<footer enable="false" generatedate="false">
 						<data value="null" />
@@ -1860,7 +1956,13 @@ ORDER BY 8 ASC, 1 DESC]]></sql>
 					
 					
 					
-					null																																																																																																																																																											</data>
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																									</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -1914,7 +2016,13 @@ ORDER BY 2 ASC, 1 DESC]]></sql>
 					
 					
 					
-					null																																													</data>
+					
+					
+					
+					
+					
+					
+					null																																																																											</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />

@@ -102,6 +102,12 @@ ORDER BY men.secuencia DESC]]></sql>
 					
 					
 					
+					
+					
+					
+					
+					
+					
 				
 				
 				
@@ -124,7 +130,7 @@ ORDER BY men.secuencia DESC]]></sql>
 					
 					
 				
-				null																																																																																																																																																																																																																																																																																																																																																																																</data>
+				null																																																																																																																																																																																																																																																																																																																																																																																																														</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -207,7 +213,13 @@ ORDER BY 1, 2, 3, 4, 5]]></sql>
 					
 					
 					
-					null																																																																																																																																							</data>
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																																					</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -293,7 +305,13 @@ END;]]></sql>
 					
 					
 					
-					null																																																																																																																													</data>
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																																											</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -351,7 +369,13 @@ ORDER BY 1, 2]]></sql>
 					
 					
 					
-					null																																																																																																				</data>
+					
+					
+					
+					
+					
+					
+					null																																																																																																																																		</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -372,22 +396,21 @@ ORDER BY 1, 2]]></sql>
   Ln_MaxVal  NUMBER;
   Lv_SenSQL  VARCHAR2(1000);
 BEGIN
-  Lv_SenSQL := 'BEGIN FOR I IN 1 .. (:Pn_MaxVal + 1) LOOP SELECT :Pv_NomSec'||'.NEXTVAL INTO Ln_Sec FROM dual; END LOOP; END';
+  Lv_SenSQL := 'DECLARE Ln_Sec  NUMBER; BEGIN FOR I IN 1 .. (:Pn_MaxVal + 1) LOOP SELECT :Pv_NomSec INTO Ln_Sec FROM dual; END LOOP; END;';
   dbms_output.put_line(Lv_SenSQL);
   EXECUTE IMMEDIATE Lv_SenSQL USING IN :Ln_MaxVal, :Lv_NomSec;
-END;
-/]]></sql>
+END;]]></sql>
 			<binds>
 				<bind id="Ln_MaxVal">
 					<prompt><![CDATA[Cantidad a Mover:]]></prompt>
 					<tooltip><![CDATA[Ln_MaxVal]]></tooltip>
-					<value><![CDATA[NULL_VALUE]]></value>
+					<value><![CDATA[27]]></value>
 					<bracket><![CDATA[null]]></bracket>
 				</bind>
 				<bind id="Lv_NomSec">
 					<prompt><![CDATA[Nombre de la Secuencia:]]></prompt>
 					<tooltip><![CDATA[Lv_NomSec]]></tooltip>
-					<value><![CDATA[NULL_VALUE]]></value>
+					<value><![CDATA[NR_S_CATALOGOS.NEXTVAL]]></value>
 					<bracket><![CDATA[null]]></bracket>
 				</bind>
 			</binds>
@@ -420,7 +443,61 @@ END;
 					
 					
 					
-					null																																																																																										</data>
+					
+					
+					
+					
+					
+					
+					null																																																																																																																								</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="08510768-0167-1000-8001-90016e139fcd" type="" style="Table" enable="true">
+		<name><![CDATA[Objetos Existentes en Menú con Errores de Compilación]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT Etiqueta "Nombre Menu",
+         Aplicacion "Pertenece a",
+         Tipo_Objeto "Tipo de Objeto",
+         Nombre_Objeto "Nombre del Objeto"
+    FROM MG_MENU_DEFINICION def
+   WHERE EXISTS (SELECT 1 FROM REP_DESCOMPILADOS qry WHERE qry.reporte = def.nombre_objeto)
+     AND def.tipo_objeto LIKE '%'||UPPER(:p_tipo_objeto)||'%'
+GROUP BY Etiqueta, Aplicacion, Tipo_Objeto, Nombre_Objeto
+ORDER BY 2, 4]]></sql>
+			<binds>
+				<bind id="p_tipo_objeto">
+					<prompt><![CDATA[Tipo de Objeto]]></prompt>
+					<tooltip><![CDATA[p_tipo_objeto]]></tooltip>
+					<value><![CDATA[fmx]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					null															</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
