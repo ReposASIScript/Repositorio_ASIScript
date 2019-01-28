@@ -1,2 +1,2 @@
 # Repositorio_ASIScript
-Scripts SQL de uso variado
+Este repositorio contiene un set de utilitarios para SQL y PL/SQL de uso variado.
