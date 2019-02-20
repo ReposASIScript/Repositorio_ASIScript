@@ -109,6 +109,11 @@ ORDER BY 3 DESC, 1 ASC]]></sql>
 					
 					
 					
+					
+					
+					
+					
+					
 				
 				
 				
@@ -134,7 +139,7 @@ ORDER BY 3 DESC, 1 ASC]]></sql>
 				
 				
 				
-				null																																																																																																																																																																																																																																																																																																																																																																																																																										</data>
+				null																																																																																																																																																																																																																																																																																																																																																																																																																																																			</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -233,7 +238,12 @@ ORDER BY 1]]></sql>
 						
 						
 						
-						null																																																																																																																																																																																																																																																																																																																		</data>
+						
+						
+						
+						
+						
+						null																																																																																																																																																																																																																																																																																																																																																</data>
 					</header>
 					<footer enable="false" generatedate="false">
 						<data value="null" />
@@ -325,6 +335,11 @@ ORDER BY 1]]></sql>
 					
 					
 					
+					
+					
+					
+					
+					
 				
 				
 				
@@ -334,7 +349,7 @@ ORDER BY 1]]></sql>
 				
 				
 				
-				null																																																																																																																																																																																																																																																																																																																																															</data>
+				null																																																																																																																																																																																																																																																																																																																																																																								</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -459,6 +474,11 @@ ORDER BY 2, 3]]></sql>
 					
 					
 					
+					
+					
+					
+					
+					
 				
 				
 				
@@ -485,7 +505,7 @@ ORDER BY 2, 3]]></sql>
 				
 				
 				
-				null																																																																																																																																																																																																																																																																																																																																																																																																																			</data>
+				null																																																																																																																																																																																																																																																																																																																																																																																																																																												</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -599,6 +619,11 @@ ORDER BY 1 DESC, 2 ASC]]></sql>
 					
 					
 					
+					
+					
+					
+					
+					
 				
 				
 				
@@ -611,7 +636,7 @@ ORDER BY 1 DESC, 2 ASC]]></sql>
 				
 				
 				
-				null																																																																																																																																																																																																																																																																																																																																																											</data>
+				null																																																																																																																																																																																																																																																																																																																																																																																				</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -707,13 +732,18 @@ ORDER BY fecha_movimiento DESC, usuario ASC]]></sql>
 					
 					
 					
+					
+					
+					
+					
+					
 				
 				
 				
 				
 				
 				
-				null																																																																																																																																																																																																																																																																																																																																			</data>
+				null																																																																																																																																																																																																																																																																																																																																																												</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -809,6 +839,11 @@ ORDER BY fecha_movimiento DESC, usuario ASC]]></sql>
 					
 					
 					
+					
+					
+					
+					
+					
 				
 				
 				
@@ -817,7 +852,7 @@ ORDER BY fecha_movimiento DESC, usuario ASC]]></sql>
 				
 				
 				
-				null																																																																																																																																																																																																																																																																																																																																											</data>
+				null																																																																																																																																																																																																																																																																																																																																																																				</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -960,6 +995,11 @@ ORDER BY 1 DESC]]></sql>
 					
 					
 					
+					
+					
+					
+					
+					
 				
 				
 				
@@ -981,7 +1021,7 @@ ORDER BY 1 DESC]]></sql>
 				
 				
 				
-				null																																																																																																																																																																																																																																																																																																																																																																																															</data>
+				null																																																																																																																																																																																																																																																																																																																																																																																																																								</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -1105,6 +1145,11 @@ ORDER BY 1 DESC]]></sql>
 					
 					
 					
+					
+					
+					
+					
+					
 				
 				
 				
@@ -1119,7 +1164,7 @@ ORDER BY 1 DESC]]></sql>
 				
 				
 				
-				null																																																																																																																																																																																																																																																																																																																																																																			</data>
+				null																																																																																																																																																																																																																																																																																																																																																																																												</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -1222,6 +1267,11 @@ ORDER BY 1]]></sql>
 					
 					
 					
+					
+					
+					
+					
+					
 				
 				
 				
@@ -1232,7 +1282,7 @@ ORDER BY 1]]></sql>
 				
 				
 				
-				null																																																																																																																																																																																																																																																																																																																																																			</data>
+				null																																																																																																																																																																																																																																																																																																																																																																												</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -1341,6 +1391,11 @@ ORDER BY ofi.codigo_aplicacion, ofi.codigo_tipo_transaccion, ofi.codigo_agencia]
 						
 						
 						
+						
+						
+						
+						
+						
 					
 					
 					
@@ -1351,7 +1406,7 @@ ORDER BY ofi.codigo_aplicacion, ofi.codigo_tipo_transaccion, ofi.codigo_agencia]
 					
 					
 					
-					null																																																																																																																																																																																																																																																																																																																																																																																																																									</data>
+					null																																																																																																																																																																																																																																																																																																																																																																																																																																																							</data>
 					</header>
 					<footer enable="false" generatedate="false">
 						<data value="null" />
@@ -1462,6 +1517,11 @@ END;]]></sql>
 					
 					
 					
+					
+					
+					
+					
+					
 				
 				
 				
@@ -1488,7 +1548,7 @@ END;]]></sql>
 					
 					
 					
-					null																																																																																																																																																																																																																																																																																																																																																																																																																																				</data>
+					null																																																																																																																																																																																																																																																																																																																																																																																																																																																													</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -1702,7 +1762,12 @@ END;]]></sql>
 					
 					
 					
-					null																																																																																																																																																																																																																																																										</data>
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																																																																			</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -1740,7 +1805,7 @@ ORDER BY 4, 2]]></sql>
 				<bind id="P_APLICACION">
 					<prompt><![CDATA[Codigo de Aplicación:]]></prompt>
 					<tooltip><![CDATA[P_APLICACION]]></tooltip>
-					<value><![CDATA[NULL_VALUE]]></value>
+					<value><![CDATA[BMG]]></value>
 					<bracket><![CDATA[null]]></bracket>
 				</bind>
 			</binds>
@@ -1800,7 +1865,12 @@ ORDER BY 4, 2]]></sql>
 					
 					
 					
-					null																																																																																																																																																																																																																																	</data>
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																																																																																										</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -1888,7 +1958,12 @@ ORDER BY 1]]></sql>
 						
 						
 						
-						null																																																																																																																																																																																																																																																																														</data>
+						
+						
+						
+						
+						
+						null																																																																																																																																																																																																																																																																																																												</data>
 					</header>
 					<footer enable="false" generatedate="false">
 						<data value="null" />
@@ -1917,6 +1992,14 @@ ORDER BY 1]]></sql>
     FROM Nr_Novedades Nov
    WHERE Nov.Codigo_Catalogo = :CODIGO_CATALOGO
 ORDER BY 1 DESC]]></sql>
+				<binds>
+					<bind id="CODIGO_CATALOGO">
+						<prompt><![CDATA[CODIGO_CATALOGO]]></prompt>
+						<tooltip><![CDATA[CODIGO_CATALOGO]]></tooltip>
+						<value><![CDATA[NULL_VALUE]]></value>
+						<bracket><![CDATA[null]]></bracket>
+					</bind>
+				</binds>
 			</query>
 				<pdf version="VERSION_1_7" compression="CONTENT">
 					<docproperty title="null" author="null" subject="null" keywords="null" />
@@ -1973,92 +2056,12 @@ ORDER BY 1 DESC]]></sql>
 						
 						
 						
-						null																																																																																																																																																																																																																																																																														</data>
-					</header>
-					<footer enable="false" generatedate="false">
-						<data value="null" />
-					</footer>
-					<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
-				</pdf>
-		</display>
-		<display id="" type="" style="Table" enable="true">
-			<name><![CDATA[Registros con Error (Agencia)]]></name>
-			<description><![CDATA[]]></description>
-			<tooltip><![CDATA[]]></tooltip>
-			<drillclass><![CDATA[]]></drillclass>
-			<CustomValues>
-				<TYPE><![CDATA[horizontal]]></TYPE>
-			</CustomValues>
-			<query>
-				<sql><![CDATA[SELECT Err.Secuencia Secuencia_Novedad,
-         Err.Datos1 Valor_Replicar1,
-         Err.Datos2 Valor_Replicar2,
-         Err.Datos3 Valor_Replicar3,
-         Err.Datos4 Valor_Replicar4,
-         Err.Datos5 Valor_Replicar5,
-         DECODE(Err.Operacion,'I','Insert','U','Update','D','Delete') AS Tipo_Operacion,
-         Err.Fecha_Hora,
-         Err.Llave_Primaria Valores_Claves,
-         Err.Codigo_Error
-    FROM Nr_Errores@agencia.v716.com Err
-   WHERE Err.Codigo_Catalogo = :CODIGO_CATALOGO
-ORDER BY 1 DESC]]></sql>
-			</query>
-				<pdf version="VERSION_1_7" compression="CONTENT">
-					<docproperty title="null" author="null" subject="null" keywords="null" />
-					<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
-					<column>
-						<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
-						<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
-						<blob blob="NONE" zip="false" />
-					</column>
-					<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
-					<header enable="false" generatedate="false">
-						<data>
 						
 						
 						
 						
 						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						null																																																																																																																																																																																																																																																																								</data>
+						null																																																																																																																																																																																																																																																																																																												</data>
 					</header>
 					<footer enable="false" generatedate="false">
 						<data value="null" />
@@ -2145,7 +2148,12 @@ ORDER BY 1, 2, 3, 4, 5]]></sql>
 					
 					
 					
-					null																																																																																																																																																																</data>
+					
+					
+					
+					
+					
+					null																																																																																																																																																																																									</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
@@ -2187,7 +2195,197 @@ ORDER BY 1]]></sql>
 					
 					
 					
-					null																																								</data>
+					
+					
+					
+					
+					
+					null																																																																	</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="f2e444f5-0168-1000-8002-c0a86442ee9c" type="" style="Table" enable="true">
+		<name><![CDATA[Listado de Movimientos x Cajero]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[Listado de Movimientos x Cajero]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT MOV.CODIGO_USUARIO "Cajero",
+         (SELECT DESCRIPCION FROM MC_TRANSACCIONES_CAJAS TRX WHERE TRX.CODIGO_APLICACION = MOV.CODIGO_APLICACION_TRAN AND TRX.CODIGO_TIPO_TRANSACCION = MOV.CODIGO_TIPO_TRANSACCION) AS "Trx. Realizada",
+         COUNT(*) AS "Cantidad de Registros"
+    FROM MC_MOVIMIENTOS_DIARIOS MOV
+   WHERE MOV.SITUACION_MOVIMIENTO = '1'
+     AND MOV.FECHA_VALIDA         = (SELECT CAL.FECHA_HOY FROM MG_CALENDARIO CAL WHERE CODIGO_APLICACION = 'BMC')
+  HAVING COUNT(*)                >= 1
+GROUP BY CODIGO_USUARIO, CODIGO_APLICACION_TRAN, CODIGO_TIPO_TRANSACCION
+ORDER BY MOV.CODIGO_USUARIO ASC]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					
+					null															</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="0749603c-0169-1000-8001-c0a86437d272" type="" style="Table" enable="true">
+		<name><![CDATA[Calendario de Abanks]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT CODIGO_APLICACION  "Producto"
+        ,FECHA_ANTERIOR     "Fecha de Ayer"
+        ,FECHA_HOY          "Fecha de Hoy"
+        ,PROXIMA_FECHA      "Proxima Fecha"
+        ,FECHA_CIERRE       "Fecha de Cierre"
+        ,FECHA_ESTADISTICO  "Fecha Estadistico"
+        ,FECHA_MAESTRO      "Fecha Maestro"
+        ,FECHA_MOVIMIENTO   "Fecha Movimiento"
+        ,ESTADO_ESTADISTICO "Estado Estadistico"
+        ,ESTADO_MAESTRO     "Estado Maestro"
+        ,ESTADO_MOVIMIENTO  "Estado Movimiento"
+    FROM MG_CALENDARIO
+   WHERE CODIGO_APLICACION = :P_APLICACION OR :P_APLICACION IS NULL
+ORDER BY 2 DESC, 1 ASC]]></sql>
+			<binds>
+				<bind id="P_APLICACION">
+					<prompt><![CDATA[Producto:]]></prompt>
+					<tooltip><![CDATA[P_APLICACION]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					null										</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="07b561d6-0169-1000-8008-c0a86437d272" type="" style="Table" enable="true">
+		<name><![CDATA[Errores de Replicacion]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT Err.Secuencia "Secuencia",
+         Err.Datos1 "Valor A Replicar",
+         --Err.Datos2 "Valor A Replicar 2",
+         --Err.Datos3 "Valor A Replicar 3",
+         --Err.Datos4 "Valor A Replicar 4",
+         --Err.Datos5 "Valor A Replicar 5",
+         (SELECT Cat.Nombre_Tabla_Regional FROM Nr_Catalogos Cat WHERE Cat.Codigo_Catalogo = Err.Codigo_Catalogo) AS "Tabla Replicadora (Nodo)",
+         (SELECT Cat.Nombre_Tabla_Agencia FROM Nr_Catalogos Cat WHERE Cat.Codigo_Catalogo = Err.Codigo_Catalogo) AS "Tabla Afectada (Agencia)",
+         DECODE(Err.Operacion,'I','Insercion','U','Actualizacion','D','Eliminacion') AS "Operacion Realizada",
+         Err.Codigo_Error "Error Generado"
+    FROM Nr_Errores Err
+ORDER BY 1 DESC]]></sql>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					
+					null										</data>
+				</header>
+				<footer enable="false" generatedate="false">
+					<data value="null" />
+				</footer>
+				<pagesetup papersize="LETTER" orientation="1" measurement="in" margintop="1.0" marginbottom="1.0" marginleft="1.0" marginright="1.0" />
+			</pdf>
+	</display>
+	<display id="0b58e31a-0169-1000-8001-c0a8643a43f6" type="" style="Table" enable="true">
+		<name><![CDATA[Registro de Parametros Dinamicos]]></name>
+		<description><![CDATA[]]></description>
+		<tooltip><![CDATA[Registro de Parametros Dinamicos]]></tooltip>
+		<drillclass><![CDATA[]]></drillclass>
+		<CustomValues>
+			<TYPE><![CDATA[horizontal]]></TYPE>
+		</CustomValues>
+		<query>
+			<sql><![CDATA[SELECT din.CODIGO_APLICACION "Producto"
+      ,din.PARAMETRO "Parametro"
+      ,din.VALOR "Valor"
+      ,din.DESCRIPCION "Descripcion del Parametro"
+  FROM MG_PARAMETROS_DINAMICOS din
+ WHERE (din.CODIGO_APLICACION = :P_APLICACION OR :P_APLICACION IS NULL)
+   AND (din.PARAMETRO LIKE :P_PARAMETRO OR :P_PARAMETRO IS NULL)
+ORDER BY 1, 2]]></sql>
+			<binds>
+				<bind id="P_APLICACION">
+					<prompt><![CDATA[Aplicacion:]]></prompt>
+					<tooltip><![CDATA[P_APLICACION]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+				<bind id="P_PARAMETRO">
+					<prompt><![CDATA[Parametro:]]></prompt>
+					<tooltip><![CDATA[P_PARAMETRO]]></tooltip>
+					<value><![CDATA[NULL_VALUE]]></value>
+					<bracket><![CDATA[null]]></bracket>
+				</bind>
+			</binds>
+		</query>
+			<pdf version="VERSION_1_7" compression="CONTENT">
+				<docproperty title="null" author="null" subject="null" keywords="null" />
+				<cell toppadding="2" bottompadding="2" leftpadding="2" rightpadding="2" horizontalalign="LEFT" verticalalign="TOP" wrap="true" />
+				<column>
+					<heading font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="FIRST_PAGE" />
+					<footing font="null" size="10" style="NORMAL" color="-16777216" rowshading="-1" labeling="NONE" />
+					<blob blob="NONE" zip="false" />
+				</column>
+				<table font="null" size="10" style="NORMAL" color="-16777216" userowshading="false" oddrowshading="-1" evenrowshading="-1" showborders="true" spacingbefore="12" spacingafter="12" horizontalalign="LEFT" />
+				<header enable="false" generatedate="false">
+					<data>
+					null					</data>
 				</header>
 				<footer enable="false" generatedate="false">
 					<data value="null" />
